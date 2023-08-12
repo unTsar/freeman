@@ -1,0 +1,261 @@
+@use 'sass:math'
+@use 'sass:color'
+
+@import config
+// @import 'blocks/**/*' 
+
+.flex
+	display: flex
+section.gray
+	background-color: #F6F7FB
+section
+	padding: 65px 30px
+.fixed
+	position: fixed
+	overflow-y: scroll
+.mobile-menu
+	display: none
+	background-color: #fff
+	position: fixed
+	z-index: 100
+	width: 100%
+	height: 100%
+	top: 55px
+	text-align: center
+	font-size: 18px
+	padding: 0 15px 55px 15px
+	box-sizing: border-box
+	transition: 0.35s
+	overflow-y: scroll
+	a
+		display: block
+	.item
+		border-bottom: 1px solid #ccc
+	.links
+		padding: 10px
+	.plans
+		font-family: Nunito-SemiBold, sans-serif
+		a
+			padding: 10px
+	ul
+		list-style: none
+		li
+			a
+				padding: 10px 0
+		li.dropdown.opened
+			span::after
+				transform: rotate(-180deg)
+		li.dropdown
+			padding: 10px 0
+			position: relative
+			cursor: pointer
+			ul
+				display: none
+				margin-top: 15px
+				background-color: #F6F7FB
+				border-top: 1px solid #ccc
+				border-bottom: 1px solid #ccc
+			span::after
+				content: url(../images/dist/down-arrow.svg)
+				transition: 0.15s
+				width: 40px
+				height: 40px
+				display: inline-block
+				position: absolute
+				top: 0
+
+.mobile-menu.hidden
+	transform: translateX(-100%)
+	opacity: 0.5
+header
+	font-size: 16px
+	padding: 0 30px
+	margin-bottom: 15px
+	ul
+		li
+			display: inline-block
+	.header-box
+		padding: 5px 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #cccccc
+		.hamburger
+			display: none
+			.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+				background-color: #33324e
+		.logo
+			font-family: Nunito-Bold, sans-serif
+			font-size: 25px
+			letter-spacing: 8px
+			text-transform: uppercase
+			text-shadow: 2px 3px 11px black
+			a
+				color: #2D047E
+				text-decoration: underline
+				text-decoration-color: #FF5900
+		.plans
+			a
+				padding: 5px 20px
+				display: block
+				border: 1px solid $textcolor
+				border-radius: 5px
+				transition: 0.5s
+			a:hover
+				border-color: $accent
+				transform: translateY(-1px)
+		ul
+			li:not(:last-child)
+				margin-right: 20px
+	.header-menu
+		padding: 15px 0
+		font-size: 18px
+		text-align: center
+		font-family: Nunito-SemiBold
+		ul
+			li:not(:last-child)
+				margin-right: 30px
+			li
+				position: relative
+				&:hover
+					cursor: pointer
+					ul
+						opacity: 1
+						pointer-events: auto
+						transform: none
+			li > ul
+				position: absolute
+				top: 100%
+				width: 360px
+				text-align: left
+				transition: 0.5s
+				transform: translateY(-15px)
+				opacity: 0
+				pointer-events: none
+				background-color: #fff
+				li
+					width: 100%
+					a
+						padding: 7px
+						display: block
+					&:hover
+						background-color: $section-bg
+footer
+	background-color: #F6F7FB
+	text-align: center
+	font-size: 18px
+	line-height: 1.5
+	padding: 30px
+	span.copy
+		font-size: 20px
+	.content
+		align-items: start
+		justify-content: space-between
+	nav
+		text-align: left
+		width: 35em
+		ul
+			li
+				display: inline-block
+				a
+					color: #7f88a6
+			li:not(:last-child)
+				margin-right: 25px
+	.contacts
+		text-align: right
+		a
+			margin-bottom: 5px
+			display: block
+	iframe
+		display: block
+		margin-left: auto
+		margin-bottom: 25px
+
+
+@media screen and (max-width: 1024px)
+	footer
+		font-size: 16px
+		span.copy
+			font-size: 18px
+		nav
+			margin-bottom: 15px
+
+@media screen and (max-width: 768px)
+	.mobile-menu
+		display: block
+	header
+		padding: 0 15px
+		margin-bottom: 0
+		.header-box
+			position: relative
+			z-index: 201
+			justify-content: center
+			padding: 12px 0
+			.hamburger
+				display: inline-block
+				position: absolute
+				top: 0
+				left: 0
+				z-index: 202
+
+			.plans, .login
+				display: none
+
+		.header-menu
+			display: none
+	footer
+		padding: 15px
+		.content
+			flex-direction: column
+		nav
+			margin-bottom: 7px
+			width: 34em
+			ul 
+				li:not(:last-child)
+					margin-right: 20px
+		.contacts
+			width: 100%
+		iframe
+			display: none
+
+@media screen and (max-width: 576px)
+	header
+		.header-box
+			.logo
+				font-size: 20px
+			.hamburger
+				padding: 12px
+			.hamburger-box
+				width: 32px
+				height: 25px
+				display: block
+			.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+				width: 32px
+				height: 3px
+			.hamburger-inner:before
+				top: -8px
+			.hamburger-inner:after
+				bottom: -8px
+	footer
+		span.copy
+			font-size: 17px
+		nav
+			ul
+				li
+					display: block
+				li:not(:last-child)
+					margin: 0
+		.contacts
+			margin-bottom: 15px
+		
+				
+@media screen and (max-width: 425px)
+	.mobile-menu
+		padding-bottom: 73px
+		top: 73px
+	header
+		.header-box
+			justify-content: space-between
+			.hamburger
+				position: relative
+	

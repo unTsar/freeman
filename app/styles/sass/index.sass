@@ -1,0 +1,424 @@
+h1
+	font-family: Nunito-Bold, sans-serif
+	font-size: 85px
+	margin-top: 0
+	margin-bottom: 20px
+h2
+	font-size: 38px
+	font-family: Nunito-Bold, sans-serif
+	text-align: center
+h3
+	font-family: Nunito-Semibold, sans-serif
+	font-size: 30px
+a.btn
+	display: inline-block
+	background-color: #4353ff
+	color: #ffffff
+	padding: 18px 22px
+	border-radius: 6px
+	font-size: 22px
+	transition: 0.5s
+a.btn:hover
+	background-color: #7B86FF
+	color: #ffffff
+.splash
+	align-items: center
+	justify-content: space-between
+	.title
+		padding: 0 30px 0 0
+		h2
+			margin: 0 0 55px 0
+			font-family: Nunito-SemiBold, sans-serif
+			font-size: 32px
+			text-align: left
+		a.btn:not(:last-child)
+			margin-right: 25px
+	.b-logo
+		margin: 60px 80px 40px 160px
+.offers
+	padding-top: 35px
+	.items
+		justify-content: space-between
+		gap: 35px
+		.item
+			padding: 32px
+			box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+			background-color: #fff
+			cursor: pointer
+			&:hover
+				.title
+					color: #4353ff
+			.title
+				font-size: 22px
+				font-family: Nunito-SemiBold, sans-serif
+				margin-bottom: 10px
+			.card-info
+				font-size: 16px
+				.line
+					justify-content: space-between
+					align-items: center
+					a
+						color: #4353ff
+					.highlight
+						background-color: #7B86FF
+						color: #ffffff
+						border-radius: 15px
+						padding: 5px 7px
+				.line:not(:last-child)
+					margin-bottom: 7px
+			img
+				width: 100%
+				margin-bottom: 15px
+.explain
+	.items
+		padding: 0 150px
+		.item
+			width: 50%
+			text-align: center
+			img
+				margin-bottom: 25px
+			.title
+				font-family: Nunito-SemiBold, sans-serif
+				font-size: 30px
+			ul
+				margin-top: 25px
+				font-size: 20px
+				padding-left: 22px
+				display: inline-block
+				li
+					text-align: left
+				li:not(:last-child)
+					margin-bottom: 20px
+.useful
+	text-align: center
+	h3
+		margin: 0 0 25px 0
+	.items	
+		.item
+			width: 50%
+			font-size: 20px
+			img
+				margin-bottom: 15px
+			p
+				margin: 0
+			a.btn
+				display: inline-block
+				margin: 35px 0
+.price
+	text-align: center
+	.items
+		align-items: start
+		justify-content: space-between
+		gap: 50px
+		.item
+			width: 33%
+			padding: 50px 25px
+			box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+			cursor: pointer
+			img
+				width: 40%
+			.title
+				font-family: Nunito-Bold, sans-serif
+				font-size: 30px
+				margin-bottom: 15px
+			.sub	
+				font-family: Nunito-SemiBold, sans-serif
+				font-size: 25px
+			.top
+				padding: 25px 0
+				margin-bottom: 35px
+				border-bottom: 1px solid #cccccc
+			ul
+				list-style: none
+				font-size: 20px
+				li
+					position: relative
+				li::before
+					content: url('../images/dist/check-read-svgrepo-com.svg')
+					display: block
+					width: 40px
+					position: absolute
+					top: -10px
+				li:not(:last-child)
+					margin-bottom: 35px
+.counters
+	justify-content: space-between
+	align-items: center
+	gap: 50px
+	text-align: center
+	.counter
+		background-color: #7B86FF
+		border-radius: 5px
+		color: #ffffff
+		padding: 20px 32px
+		width: 33%
+		line-height: 1.5
+		span
+			font-size: 28px
+			font-family: Nunito-Bold
+		.sub
+			font-size: 20px
+
+		
+@media screen and (max-width: 1860px)
+	main
+		.splash
+			.b-logo
+				margin-left: auto
+				margin-right: auto
+				img
+					width: 100%
+@media screen and (max-width: 1440px)
+	main
+		a.btn
+			font-size: 20px
+			padding: 10px 20px
+		.splash
+			.title
+				h1
+					font-size: 48px
+				h2
+					font-size: 25px
+				a.btn:not(:last-child)
+					margin-right: 15px
+		.offers
+			.items
+				flex-wrap: wrap
+				justify-content: space-evenly
+				.item
+					width: 41%
+		.explain
+			.items
+				padding: 0
+		.price
+			.items
+				gap: 15px
+		.counters
+			gap: 25px
+@media screen and (max-width: 1024px)
+	main
+		section
+			padding: 30px
+			h2
+				font-size: 32px
+		.splash
+			.title
+				margin-top: 15px
+				h1
+					font-size: 35px
+				h2
+					font-size: 20px
+				a.btn
+					margin-bottom: 15px		
+		.offers
+			.items
+				gap: 20px
+				.item
+					width: 38%
+		.explain
+			.items
+				.item
+					img
+						width: 65%
+					.title
+						font-size: 25px
+					ul
+						font-size: 18px
+						list-style: none
+						padding: 0
+						li
+							text-align: center
+		.useful
+			h3
+				font-size: 25px
+			.items
+				.item
+					img 
+						width: 75%
+					p
+						font-size: 18px
+		.price
+			h3
+				font-size: 25px
+			.items
+				flex-wrap: wrap
+				justify-content: center
+				.item
+					width: 40%
+					.top
+						padding: 15px 0
+						margin-bottom: 15px
+					.title
+						font-size: 22px
+					.sub
+						font-size: 20px
+					ul
+						font-size: 18px
+						li::before
+							width: 30px
+							top: -5px
+		.counters 
+			.num
+				font-size: 25px
+			.counter
+				padding: 15px
+
+@media screen and (max-width: 768px)
+	main
+		a.btn
+			font-size: 18px
+		section
+			padding: 15px
+			h2
+				font-size: 25px
+		.splash
+			flex-direction: column
+			text-align: center
+			.b-logo
+				order: 0
+				margin: 0 auto
+				width: 30%
+			.title
+				order: 1
+				margin-top: 0
+				padding-right: 0
+				h1
+					font-size: 28px
+				h2
+					text-align: center
+					margin-bottom: 25px
+					font-size: 20px
+				a.btn
+					margin-bottom: 0
+		.offers
+			padding-top: 15px
+			.items
+				.item
+					width: 50%
+					.title
+						font-size: 18px
+		.explain
+			.items
+				display: block
+				.item
+					width: auto
+					margin-top: 25px
+					img
+						width: 40%
+		.useful
+			h3
+				font-size: 20px
+			.items
+				display: block
+				.item
+					width: auto
+					img
+						width: 60%
+		.price
+			h3
+				font-size: 20px
+			.items
+				display: block
+				.item:not(:last-child)
+					margin-bottom: 15px
+				.item
+					width: 50%
+					margin: 0 auto
+		.counters
+			gap: 15px
+			.counter
+				padding: 5px 15px
+				.num
+					font-size: 20px
+				.sub
+					font-size: 18px
+@media screen and (max-width: 576px)
+	main
+		a.btn
+			font-size: 16px
+		section
+			h2
+				font-size: 22px
+		.splash
+			.b-logo
+				width: 50%
+			.title
+				h1
+					font-size: 25px
+					margin-bottom: 15px
+				h2
+					font-size: 18px
+					margin-bottom: 15px
+		.offers 
+			.items
+				.item
+					width: 70%
+		.explain
+			.items
+				.item
+					margin-top: 15px
+					img
+						width: 50%
+					.title
+						font-size: 20px
+					ul
+						font-size: 16px
+						margin-top: 15px
+		.useful
+			h3
+				font-size: 18px
+			.items
+				.item
+					img
+						width: 70%
+		.price
+			.items
+				.item
+					padding: 30px 15px
+					width: auto
+					img
+						width: 30%
+					.title
+						font-size: 20px
+					.sub
+						font-size: 18px
+					ul
+						font-size: 18px
+						li:not(:last-child)
+							margin-bottom: 15px
+		.counters
+			gap: 5px
+			.counter
+				.num
+					font-size: 18px
+				.sub
+					font-size: 16px
+@media screen and (max-width: 425px)
+	main
+		.splash
+			.title
+				a.btn:not(:last-child)
+					margin-right: 0
+					margin-bottom: 10px
+				a.btn
+					display: block
+		.offers
+			.items
+				.item
+					width: 100%
+		.explain
+			.items
+				.item
+					img
+						width: 70%
+		.useful
+			.items
+				.item
+					a.btn
+						margin: 15px 0
+		.counters
+			flex-wrap: wrap
+			justify-content: center
+			.counter
+				width: 40%
+			
