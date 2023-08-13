@@ -1,6 +1,6 @@
 main
 	display: flex
-	padding: 0 15px
+	padding: 0 15px 35px 15px
 aside
 	padding-top: 86px
 	img
@@ -9,14 +9,15 @@ aside
 		display: block
 		padding: 5px 0
 section
-	padding: 15px
+	padding: 25px 15px
 	width: 100%
 h2
 	font-size: 25px
 	text-align: center
-.row
-	text-align: right
 .row:not(:last-child)
+	display: flex
+	align-items: center
+	justify-content: space-between
 	padding-bottom: 15px
 	border-bottom: 1px solid #cccccc
 button
@@ -28,6 +29,10 @@ button
 	font-size: 16px
 	*
 		vertical-align: middle
+button[type=reset]
+	margin-right: auto
+button[type=button]
+	margin-right: 10px
 .b-btn
 	background-color: #4353ff
 	color: #ffffff
@@ -93,8 +98,6 @@ button
 		svg
 			path
 				stroke: #ffffff
-.sort, button[type=reset]
-	float: left
 .search
 	display: inline-flex
 	width: 30%
@@ -116,6 +119,8 @@ button
 	.icon:hover
 		background-color: #7B86FF
 .btn-ad-search
+	display: block
+	margin-left: auto
 	svg
 		transition: 0.15s
 .btn-ad-search.opened
@@ -140,7 +145,6 @@ button
 		select:not(:last-child)
 			margin-right: 25px
 	.inputs
-		text-align: left
 		margin-top: 20px
 		.title
 			margin-bottom: 15px
@@ -156,9 +160,9 @@ button
 			*
 				vertical-align: middle
 		.checkbox-area
-			padding-left: 25px
+			padding-left: 20px
+			width: 40%
 		.input-area
-			width: 30%
 			span
 				padding: 0 15px
 		input[type=number]
@@ -176,7 +180,8 @@ button
 	align-items: start
 	justify-content: space-evenly
 	flex-wrap: wrap
-	gap: 15px
+	row-gap: 20px
+	column-gap: 15px
 	font-size: 16px
 	.item
 		box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
@@ -223,8 +228,109 @@ button
 				padding: 5px 7px
 		.line:not(:last-child)
 			margin-bottom: 10px
-
-
+	.item.mobile-adv
+		display: none
+		padding-top: 0
+		padding-bottom: 0
+		background-color: transparent
+		box-shadow: none
+		img
+			margin-bottom: 0
+		a
+			display: block
+@media screen and (max-width: 1440px)
+	aside
+		padding-top: 57px
+	h2
+		font-size: 22px
+	section
+		padding-top: 0
+		.search
+			width: 34%
+			.icon
+				svg
+					width: 25px
+					height: 25px
+		.sort-options
+			width: 240px
+			button
+				svg
+					width: 25px
+					height: 25px
+		.ad-search
+			font-size: 16px
+			padding: 15px 0
+			.inputs
+				.input-area
+					span
+						padding: 0
+				.checkbox-area
+					width: 54%
+					padding: 0
+			.selects
+				select
+					padding: 5px 10px
+		.items
+			column-gap: 5px
+			.item
+				padding: 15px 10px
+				width: 30%
+				.card-header
+					svg
+						width: 25px
+						height: 25px
+@media screen and (max-width: 1024px)
+	section
+		.row:not(:last-child)
+			flex-wrap: wrap
+			justify-content: space-between
+		.sort
+			display: inline-block
+		.btn-sort, .btn-ad-search
+			padding: 5px
+		button[type=reset], button[type=button]
+			margin-right: 0
+		.search
+			width: 100%
+			margin-top: 15px
+		.ad-search
+			.selects
+				display: block
+				select
+					width: 100%
+				select:not(:last-child)
+					margin-right: 0
+					margin-bottom: 15px
+			.inputs
+				display: block
+				.input-area:not(:last-child)
+					margin-bottom: 15px
+				.checkbox-area
+					width: 100%
+		.items
+			.item
+				width: 45%
+@media screen and (max-width: 768px)
+	aside
+		display: none
+	section
+		padding: 0
+	.sort-options
+		left: 5px
+	.items
+		.item.mobile-adv
+			display: block
+@media screen and (max-width: 576px)
+	h2
+		font-size: 20px
+	section
+		.items
+			.item 
+				width: 100%
+				padding: 15px
+	.b-btn
+		width: 100%
+		margin-top: 15px
 
 
 	
