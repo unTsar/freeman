@@ -1,0 +1,332 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 15px;
+}
+
+aside {
+  padding-top: 86px;
+}
+aside img {
+  width: 200px;
+}
+aside a {
+  display: block;
+  padding: 5px 0;
+}
+
+section {
+  padding: 15px;
+  width: 100%;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.row {
+  text-align: right;
+}
+
+.row:not(:last-child) {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #cccccc;
+}
+
+button {
+  font-family: Nunito-Regular, sans-serif;
+  border: none;
+  outline: none;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 16px;
+}
+button * {
+  vertical-align: middle;
+}
+
+.b-btn {
+  background-color: #4353ff;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.b-btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+
+.btn-sort, .btn-ad-search {
+  background-color: #fff;
+  color: #7B86FF;
+  padding: 6px 15px;
+}
+.btn-sort svg, .btn-ad-search svg {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 1px;
+}
+
+.btn-sort {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.sort {
+  position: relative;
+}
+
+.sort-options.hidden {
+  opacity: 0;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  pointer-events: none;
+}
+
+.sort-options {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  width: 250px;
+  text-align: left;
+  font-size: 16px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+}
+.sort-options ul {
+  background-color: #fff;
+  list-style: none;
+}
+.sort-options li {
+  padding: 10px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.sort-options li:hover {
+  background-color: #F6F7FB;
+}
+.sort-options button {
+  background-color: transparent;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
+.sort-options button svg {
+  width: 30px;
+  height: 30px;
+}
+.sort-options button svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.sort-options button:hover {
+  background-color: #7B86FF;
+}
+.sort-options button:hover svg path {
+  stroke: #ffffff;
+}
+.sort-options button.active {
+  background-color: #7B86FF;
+}
+.sort-options button.active svg path {
+  stroke: #ffffff;
+}
+
+.sort, button[type=reset] {
+  float: left;
+}
+
+.search {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 30%;
+}
+.search input[type=search] {
+  width: 100%;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+}
+.search .icon {
+  background-color: #4353ff;
+  padding: 4px 10px 6px 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.search .icon svg {
+  width: 30px;
+  height: 30px;
+}
+.search .icon:hover {
+  background-color: #7B86FF;
+}
+
+.btn-ad-search svg {
+  -webkit-transition: 0.15s;
+  transition: 0.15s;
+}
+
+.btn-ad-search.opened svg {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.ad-search {
+  padding: 15px 30px;
+  display: none;
+}
+.ad-search .selects select {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  width: 25%;
+}
+.ad-search .selects select option:focus {
+  background-color: red;
+}
+.ad-search .selects select option {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.ad-search .selects select:not(:last-child) {
+  margin-right: 25px;
+}
+.ad-search .inputs {
+  text-align: left;
+  margin-top: 20px;
+}
+.ad-search .inputs .title {
+  margin-bottom: 15px;
+  font-family: Nunito-SemiBold, sans-serif;
+}
+.ad-search .inputs input[type=checkbox] {
+  width: 15px;
+  height: 15px;
+}
+.ad-search .inputs label, .ad-search .inputs input[type=checkbox] {
+  cursor: pointer;
+}
+.ad-search .inputs .check-area:not(:last-child) {
+  margin-bottom: 10px;
+}
+.ad-search .inputs .check-area * {
+  vertical-align: middle;
+}
+.ad-search .inputs .checkbox-area {
+  padding-left: 25px;
+}
+.ad-search .inputs .input-area {
+  width: 30%;
+}
+.ad-search .inputs .input-area span {
+  padding: 0 15px;
+}
+.ad-search .inputs input[type=number] {
+  width: 30%;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+}
+.ad-search .inputs input[type=number]::-webkit-outer-spin-button, .ad-search .inputs input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.ad-search .inputs input[type=number], .ad-search .inputs input[type=number]:hover, .ad-search .inputs input[type=number]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+.items {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 15px;
+  font-size: 16px;
+}
+.items .item {
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  background-color: #fff;
+  padding: 15px 25px;
+  width: 28%;
+  cursor: pointer;
+}
+.items .item .card-header button {
+  cursor: pointer;
+  padding: 4px 5px;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.items .item .card-header button:hover {
+  background-color: #7B86FF;
+}
+.items .item .card-header button:hover svg {
+  stroke: #ffffff;
+}
+.items .item .card-header button:hover svg path {
+  stroke: #ffffff;
+}
+.items .item .card-header svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+.items .item .card-header svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+.items .item img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.items .item .title {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  margin: 15px 0;
+}
+.items .item .line a {
+  color: #4353ff;
+}
+.items .item .line .value {
+  float: right;
+}
+.items .item .line .highlight {
+  background-color: #7B86FF;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 5px 7px;
+}
+.items .item .line:not(:last-child) {
+  margin-bottom: 10px;
+}

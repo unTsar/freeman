@@ -1,3 +1,11 @@
+section.gray {
+  background-color: #F6F7FB;
+}
+
+section {
+  padding: 65px 30px;
+}
+
 h1 {
   font-family: Nunito-Bold, sans-serif;
   font-size: 85px;
@@ -64,8 +72,11 @@ a.btn:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 35px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .offers .items .item {
+  width: 33.33%;
   padding: 32px;
   -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
           box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);

@@ -1,0 +1,230 @@
+main
+	display: flex
+	padding: 0 15px
+aside
+	padding-top: 86px
+	img
+		width: 200px
+	a
+		display: block
+		padding: 5px 0
+section
+	padding: 15px
+	width: 100%
+h2
+	font-size: 25px
+	text-align: center
+.row
+	text-align: right
+.row:not(:last-child)
+	padding-bottom: 15px
+	border-bottom: 1px solid #cccccc
+button
+	font-family: Nunito-Regular, sans-serif
+	border: none
+	outline: none
+	vertical-align: middle
+	cursor: pointer
+	font-size: 16px
+	*
+		vertical-align: middle
+.b-btn
+	background-color: #4353ff
+	color: #ffffff
+	padding: 10px 15px
+	border-radius: 6px
+	transition: 0.5s
+.b-btn:hover
+	background-color: #7B86FF
+	color: #ffffff
+.btn-sort, .btn-ad-search
+	background-color: #fff
+	color: #7B86FF
+	padding: 6px 15px
+	svg
+		width: 30px
+		height: 30px
+		padding-bottom: 1px
+.btn-sort
+	display: inline-block
+	position: relative
+	cursor: pointer
+.sort
+	position: relative
+.sort-options.hidden
+	opacity: 0
+	transform: translateY(0)
+	pointer-events: none
+.sort-options
+	position: absolute
+	top: 50px
+	left: 15px
+	width: 250px
+	text-align: left
+	font-size: 16px
+	transition: 0.25s
+	transform: translateY(-10px)
+	box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+	ul
+		background-color: #fff
+		list-style: none
+	li
+		padding: 10px
+		transition: 0.25s
+		&:hover
+			background-color: #F6F7FB
+	button
+		background-color: transparent
+		transition: 0.25s
+		border-radius: 5px
+		padding: 2px 5px
+		svg
+			width: 30px
+			height: 30px
+			path
+				transition: 0.25s
+		&:hover
+			background-color: #7B86FF
+			svg
+				path
+					stroke: #ffffff
+	button.active
+		background-color: #7B86FF
+		svg
+			path
+				stroke: #ffffff
+.sort, button[type=reset]
+	float: left
+.search
+	display: inline-flex
+	width: 30%
+	input[type=search]
+		width: 100%
+		font-size: 16px
+		font-family: Nunito-Regular, sans-serif
+		border: 1px solid #ccc
+		padding: 10px 15px
+	.icon
+		background-color: #4353ff
+		padding: 4px 10px 6px 10px
+		border-top-right-radius: 5px
+		border-bottom-right-radius: 5px
+		transition: 0.5s
+		svg
+			width: 30px
+			height: 30px 
+	.icon:hover
+		background-color: #7B86FF
+.btn-ad-search
+	svg
+		transition: 0.15s
+.btn-ad-search.opened
+	svg
+		transform: rotate(-180deg)
+.ad-search
+	padding: 15px 30px
+	display: none
+	.selects
+		select
+			outline: none
+			border: 1px solid #ccc
+			padding: 10px 15px
+			border-radius: 5px
+			font-family: Nunito-Regular, sans-serif
+			font-size: 16px
+			width: 25%
+			option:focus
+				background-color: red
+			option
+				appearance: none
+		select:not(:last-child)
+			margin-right: 25px
+	.inputs
+		text-align: left
+		margin-top: 20px
+		.title
+			margin-bottom: 15px
+			font-family: Nunito-SemiBold, sans-serif
+		input[type=checkbox]
+			width: 15px
+			height: 15px
+		label, input[type=checkbox]
+			cursor: pointer
+		.check-area
+			&:not(:last-child)
+				margin-bottom: 10px
+			*
+				vertical-align: middle
+		.checkbox-area
+			padding-left: 25px
+		.input-area
+			width: 30%
+			span
+				padding: 0 15px
+		input[type=number]
+			width: 30%
+			border: none
+			border-bottom: 1px solid #cccccc
+			font-size: 16px
+			font-family: Nunito-Regular, sans-serif
+		input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+			-webkit-appearance: none
+		input[type='number'], input[type="number"]:hover, input[type="number"]:focus
+			appearance: none
+			-moz-appearance: textfield
+.items
+	align-items: start
+	justify-content: space-evenly
+	flex-wrap: wrap
+	gap: 15px
+	font-size: 16px
+	.item
+		box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+		background-color: #fff
+		padding: 15px 25px
+		width: 28%
+		cursor: pointer
+		.card-header
+			button
+				cursor: pointer
+				padding: 4px 5px
+				margin-right: 15px
+				border-radius: 5px
+				background-color: #fff
+				transition: 0.25s
+				&:hover
+					background-color: #7B86FF
+					svg
+						stroke: #ffffff
+						path
+							stroke: #ffffff
+			svg
+				vertical-align: middle
+				width: 30px
+				height: 30px
+				path
+					transition: 0.25s
+		img
+			width: 100%
+			margin-bottom: 25px
+		.title
+			font-family: Nunito-SemiBold, sans-serif
+			font-size: 18px
+			margin: 15px 0
+		.line
+			a
+				color: #4353ff
+			.value
+				float: right
+			.highlight
+				background-color: #7B86FF
+				color: #ffffff
+				border-radius: 15px
+				padding: 5px 7px
+		.line:not(:last-child)
+			margin-bottom: 10px
+
+
+
+
+	
