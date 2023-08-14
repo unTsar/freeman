@@ -1,336 +1,353 @@
 main
-	display: flex
-	padding: 0 15px 35px 15px
-aside
-	padding-top: 86px
-	img
-		width: 200px
-	a
-		display: block
-		padding: 5px 0
-section
-	padding: 25px 15px
-	width: 100%
-h2
-	font-size: 25px
-	text-align: center
-.row:not(:last-child)
-	display: flex
-	align-items: center
-	justify-content: space-between
-	padding-bottom: 15px
-	border-bottom: 1px solid #cccccc
-button
-	font-family: Nunito-Regular, sans-serif
-	border: none
-	outline: none
-	vertical-align: middle
-	cursor: pointer
+	padding: 0 30px 65px 30px
 	font-size: 16px
-	*
-		vertical-align: middle
-button[type=reset]
-	margin-right: auto
-button[type=button]
-	margin-right: 10px
-.b-btn
-	background-color: #4353ff
-	color: #ffffff
-	padding: 10px 15px
-	border-radius: 6px
-	transition: 0.5s
-.b-btn:hover
-	background-color: #7B86FF
-	color: #ffffff
-.btn-sort, .btn-ad-search
-	background-color: #fff
-	color: #7B86FF
-	padding: 6px 15px
-	svg
-		width: 30px
-		height: 30px
-		padding-bottom: 1px
-.btn-sort
-	display: inline-block
-	position: relative
-	cursor: pointer
-.sort
-	position: relative
-.sort-options.hidden
-	opacity: 0
-	transform: translateY(0)
-	pointer-events: none
-.sort-options
-	position: absolute
-	top: 50px
-	left: 15px
-	width: 250px
-	text-align: left
-	font-size: 16px
-	transition: 0.25s
-	transform: translateY(-10px)
-	box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
-	ul
-		background-color: #fff
-		list-style: none
-	li
-		padding: 10px
-		transition: 0.25s
-		&:hover
-			background-color: #F6F7FB
-	button
-		background-color: transparent
-		transition: 0.25s
-		border-radius: 5px
-		padding: 2px 5px
-		svg
-			width: 30px
-			height: 30px
-			path
-				transition: 0.25s
-		&:hover
-			background-color: #7B86FF
-			svg
-				path
-					stroke: #ffffff
-	button.active
-		background-color: #7B86FF
-		svg
-			path
-				stroke: #ffffff
-.search
-	display: inline-flex
-	width: 30%
-	input[type=search]
-		width: 100%
-		font-size: 16px
-		font-family: Nunito-Regular, sans-serif
-		border: 1px solid #ccc
-		padding: 10px 15px
-	.icon
-		background-color: #4353ff
-		padding: 4px 10px 6px 10px
-		border-top-right-radius: 5px
-		border-bottom-right-radius: 5px
-		transition: 0.5s
-		svg
-			width: 30px
-			height: 30px 
-	.icon:hover
-		background-color: #7B86FF
-.btn-ad-search
-	display: block
-	margin-left: auto
-	svg
-		transition: 0.15s
-.btn-ad-search.opened
-	svg
-		transform: rotate(-180deg)
-.ad-search
-	padding: 15px 30px
-	display: none
-	.selects
-		select
-			outline: none
-			border: 1px solid #ccc
-			padding: 10px 15px
-			border-radius: 5px
-			font-family: Nunito-Regular, sans-serif
-			font-size: 16px
-			width: 25%
-			option:focus
-				background-color: red
-			option
-				appearance: none
-		select:not(:last-child)
-			margin-right: 25px
-	.inputs
-		margin-top: 20px
-		.title
-			margin-bottom: 15px
-			font-family: Nunito-SemiBold, sans-serif
-		input[type=checkbox]
-			width: 15px
-			height: 15px
-		label, input[type=checkbox]
-			cursor: pointer
-		.check-area
-			&:not(:last-child)
-				margin-bottom: 10px
-			*
-				vertical-align: middle
-		.checkbox-area
-			padding-left: 20px
-			width: 40%
-		.input-area
-			span
+	h2
+		font-size: 25px
+		text-align: center
+	section
+		.content
+			padding-top: 25px
+			aside
+				img
+					width: 200px
+				a
+					display: block
+					padding: 5px 0
+			.items
+				justify-content: center
+				align-content: start
+				flex-wrap: wrap
+				gap: 20px
 				padding: 0 15px
-		input[type=number]
-			width: 30%
-			border: none
-			border-bottom: 1px solid #cccccc
-			font-size: 16px
-			font-family: Nunito-Regular, sans-serif
-		input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
-			-webkit-appearance: none
-		input[type='number'], input[type="number"]:hover, input[type="number"]:focus
-			appearance: none
-			-moz-appearance: textfield
-.items
-	align-items: start
-	justify-content: space-evenly
-	flex-wrap: wrap
-	row-gap: 20px
-	column-gap: 15px
-	font-size: 16px
-	.item
-		box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
-		background-color: #fff
-		padding: 15px 25px
-		width: 28%
-		cursor: pointer
-		.card-header
+				.item
+					box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+					background-color: #fff
+					padding: 15px 25px
+					max-width: 26%
+					cursor: pointer
+					.card-header
+						button
+							cursor: pointer
+							padding: 4px 5px
+							margin-right: 15px
+							border: none
+							border-radius: 5px
+							background-color: #fff
+							transition: 0.25s
+							&:hover
+								background-color: #7B86FF
+								svg
+									stroke: #ffffff
+									path
+										stroke: #ffffff
+						svg
+							vertical-align: middle
+							width: 30px
+							height: 30px
+							path
+								transition: 0.25s
+					img
+						width: 100%
+						margin-bottom: 25px
+					.title
+						font-family: Nunito-SemiBold, sans-serif
+						font-size: 18px
+						margin: 15px 0
+					.line
+						a
+							color: #4353ff
+						.value
+							float: right
+						.highlight
+							background-color: #7B86FF
+							color: #ffffff
+							border-radius: 15px
+							padding: 5px 7px
+					.line:not(:last-child)
+						margin-bottom: 10px
+				.item.mobile-adv
+					display: none
+					padding-top: 0
+					padding-bottom: 0
+					background-color: transparent
+					box-shadow: none
+					img
+						margin-bottom: 0
+					a
+						display: block
+		form
+			.row:not(:last-child)
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding-bottom: 15px
+				border-bottom: 1px solid #cccccc
 			button
+				font-family: Nunito-Regular, sans-serif
+				font-size: 16px
+				border: none
+				outline: none
 				cursor: pointer
-				padding: 4px 5px
-				margin-right: 15px
-				border-radius: 5px
-				background-color: #fff
-				transition: 0.25s
-				&:hover
-					background-color: #7B86FF
-					svg
-						stroke: #ffffff
-						path
-							stroke: #ffffff
-			svg
-				vertical-align: middle
-				width: 30px
-				height: 30px
-				path
-					transition: 0.25s
-		img
-			width: 100%
-			margin-bottom: 25px
-		.title
-			font-family: Nunito-SemiBold, sans-serif
-			font-size: 18px
-			margin: 15px 0
-		.line
-			a
-				color: #4353ff
-			.value
-				float: right
-			.highlight
+				svg, span
+					vertical-align: middle
+			button[type=reset]
+				margin-right: auto
+			button[type=button]
+				margin-right: 10px
+			.b-btn
+				background-color: #4353ff
+				color: #ffffff
+				padding: 10px 15px
+				border-radius: 6px
+				transition: 0.5s
+			.b-btn:hover
 				background-color: #7B86FF
 				color: #ffffff
-				border-radius: 15px
-				padding: 5px 7px
-		.line:not(:last-child)
-			margin-bottom: 10px
-	.item.mobile-adv
-		display: none
-		padding-top: 0
-		padding-bottom: 0
-		background-color: transparent
-		box-shadow: none
-		img
-			margin-bottom: 0
-		a
-			display: block
-@media screen and (max-width: 1440px)
-	aside
-		padding-top: 57px
-	h2
-		font-size: 22px
-	section
-		padding-top: 0
-		.search
-			width: 34%
-			.icon
-				svg
-					width: 25px
-					height: 25px
-		.sort-options
-			width: 240px
-			button
-				svg
-					width: 25px
-					height: 25px
-		.ad-search
-			font-size: 16px
-			padding: 15px 0
-			.inputs
-				.input-area
-					span
-						padding: 0
-				.checkbox-area
-					width: 54%
-					padding: 0
-			.selects
-				select
-					padding: 5px 10px
-		.items
-			column-gap: 5px
-			.item
-				padding: 15px 10px
-				width: 30%
-				.card-header
-					svg
-						width: 25px
-						height: 25px
-@media screen and (max-width: 1024px)
-	section
-		.row:not(:last-child)
-			flex-wrap: wrap
-			justify-content: space-between
-		.sort
-			display: inline-block
-		.btn-sort, .btn-ad-search
-			padding: 5px
-		button[type=reset], button[type=button]
-			margin-right: 0
-		.search
-			width: 100%
-			margin-top: 15px
-		.ad-search
-			.selects
-				display: block
-				select
-					width: 100%
-				select:not(:last-child)
-					margin-right: 0
-					margin-bottom: 15px
-			.inputs
-				display: block
-				.input-area:not(:last-child)
-					margin-bottom: 15px
-				.checkbox-area
-					width: 100%
-		.items
-			.item
-				width: 45%
-@media screen and (max-width: 768px)
-	aside
-		display: none
-	section
-		padding: 0
-	.sort-options
-		left: 5px
-	.items
-		.item.mobile-adv
-			display: block
-@media screen and (max-width: 576px)
-	h2
-		font-size: 20px
-	section
-		.items
-			.item 
-				width: 100%
+			.ad-search
 				padding: 15px
-	.b-btn
-		width: 100%
-		margin-top: 15px
+				display: none
+				.selects
+					select
+						outline: none
+						border: 1px solid #ccc
+						padding: 10px 15px
+						border-radius: 5px
+						font-family: Nunito-Regular, sans-serif
+						font-size: 16px
+						width: 25%
+						option:focus
+							background-color: red
+						option
+							appearance: none
+					select:not(:last-child)
+						margin-right: 25px
+				.inputs
+					margin-top: 20px
+					.title
+						margin-bottom: 15px
+						font-family: Nunito-SemiBold, sans-serif
+					input[type=checkbox]
+						width: 15px
+						height: 15px
+					label, input[type=checkbox]
+						cursor: pointer
+					.check-area
+						&:not(:last-child)
+							margin-bottom: 10px
+						*
+							vertical-align: middle
+					.checkbox-area
+						padding-left: 20px
+						width: 40%
+					.input-area
+						span
+							padding: 0 15px
+					input[type=number]
+						width: 30%
+						border: none
+						border-bottom: 1px solid #cccccc
+						font-size: 16px
+						font-family: Nunito-Regular, sans-serif
+					input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+						-webkit-appearance: none
+					input[type='number'], input[type="number"]:hover, input[type="number"]:focus
+						appearance: none
+						-moz-appearance: textfield
+			.btn-ad-search
+				display: block
+				margin-left: auto
+				svg
+					transition: 0.15s
+			.btn-ad-search.opened
+				svg
+					transform: rotate(-180deg)
+			.btn-sort, .btn-ad-search
+				background-color: #fff
+				color: #7B86FF
+				padding: 6px 15px
+				svg
+					width: 30px
+					height: 30px
+					padding-bottom: 1px
+			.btn-sort
+				display: inline-block
+				position: relative
+				cursor: pointer
+			.sort
+				position: relative
+			.sort-options.hidden
+				opacity: 0
+				transform: translateY(0)
+				pointer-events: none
+			.sort-options
+				position: absolute
+				top: 50px
+				left: 15px
+				width: 250px
+				text-align: left
+				font-size: 16px
+				transition: 0.25s
+				transform: translateY(-10px)
+				box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+				ul
+					background-color: #fff
+					list-style: none
+				li
+					padding: 10px
+					transition: 0.25s
+					&:hover
+						background-color: #F6F7FB
+				button
+					background-color: transparent
+					transition: 0.25s
+					border-radius: 5px
+					padding: 2px 5px
+					svg
+						width: 30px
+						height: 30px
+						path
+							transition: 0.25s
+					&:hover
+						background-color: #7B86FF
+						svg
+							path
+								stroke: #ffffff
+				button.active
+					background-color: #7B86FF
+					svg
+						path
+							stroke: #ffffff
+			.search
+				display: inline-flex
+				width: 30%
+				input[type=search]
+					width: 100%
+					font-size: 16px
+					font-family: Nunito-Regular, sans-serif
+					border: 1px solid #ccc
+					padding: 10px 15px
+				.icon
+					background-color: #4353ff
+					padding: 4px 10px 6px 10px
+					border-top-right-radius: 5px
+					border-bottom-right-radius: 5px
+					transition: 0.5s
+					svg
+						width: 30px
+						height: 30px 
+				.icon:hover
+					background-color: #7B86FF
+@media screen and (max-width: 1440px)
+	main
+		h2
+			font-size: 22px
+		section
+			form
+				.search
+					width: 34%
+					.icon
+						svg
+							width: 25px
+							height: 25px
+				.sort-options
+					width: 240px
+					button
+						svg
+							width: 25px
+							height: 25px
+				.ad-search
+					font-size: 16px
+					padding: 15px 0
+					.inputs
+						.input-area
+							span
+								padding: 0
+						.checkbox-area
+							width: 54%
+							padding: 0
+					.selects
+						select
+							padding: 5px 10px
+			.content
+				.items
+					column-gap: 5px
+					padding: 0
+					.item
+						max-width: 43%
+						padding: 15px
+						.card-header
+							svg
+								width: 25px
+								height: 25px
+@media screen and (max-width: 1024px)
+	main
+		section
+			form
+				.row:not(:last-child)
+					flex-wrap: wrap
+				.btn-sort, .btn-ad-search
+					padding: 5px
+				button[type=reset], button[type=button]
+					margin-right: 0
+				.search
+					width: 100%
+					margin-top: 15px
+				.ad-search
+					.selects
+						display: block
+						select
+							width: 100%
+						select:not(:last-child)
+							margin-right: 0
+							margin-bottom: 15px
+					.inputs
+						display: block
+						.input-area:not(:last-child)
+							margin-bottom: 15px
+						.checkbox-area
+							width: 100%
+			.content
+				aside
+					img
+						width: 150px
+				.items
+					padding: 0 15px
+					.item
+						max-width: none
+@media screen and (max-width: 768px)
+	main
+		padding: 0 15px 35px 15px
+		section
+			form
+				.sort-options
+					left: 5px
+			.content
+				aside
+					display: none
+				.items
+					padding: 0
+					column-gap: 15px
+					.item
+						max-width: 43%
+					.item.mobile-adv
+						width: 100%
+						display: block
+@media screen and (max-width: 576px)
+	main
+		h2
+			font-size: 20px
+		section
+			form
+				.b-btn
+					width: 100%
+					margin-top: 15px
+			.content
+				padding-top: 15px
+				.items
+					.item 
+						width: 100%
+						max-width: none
+						padding: 15px
 
 
 	
