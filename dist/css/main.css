@@ -80,6 +80,10 @@ a:hover {
   color: #4353ff;
 }
 
+button, input {
+  outline: none;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
