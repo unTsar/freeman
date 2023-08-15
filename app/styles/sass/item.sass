@@ -1,0 +1,144 @@
+main
+	display: flex
+	font-size: 16px
+	h2
+		text-align: center
+		font-size: 25px
+	aside
+		padding-top: 70px
+		padding: 0 15px 15px 15px
+		a
+			img
+				width: 200px
+	.content
+		flex-wrap: wrap
+		padding-bottom: 35px
+		h2
+			width: 100%
+		.card
+			width: 70%
+			padding-right: 15px
+			box-sizing: border-box
+			.card-header
+				margin-bottom: 15px
+				button:last-child
+					float: right
+				button
+					padding: 5px
+					vertical-align: middle
+					border: none
+					border-radius: 5px
+					background: none
+					cursor: pointer
+					transition: 0.25s
+					&:hover
+						background-color: #7B86FF
+						svg
+							stroke: #ffffff
+							path
+								stroke: #ffffff
+					svg
+						vertical-align: middle
+						width: 30px
+						height: 30px
+					svg, path
+						transition: 0.25s
+			img
+				display: block
+				margin: 0 auto 25px auto
+				max-width: 900px
+				width: 100%
+				height: auto
+			.card-info
+				margin-bottom: 25px
+				.line
+					span, a
+						vertical-align: middle
+					a
+						color: #4353ff
+					.value
+						float: right
+					.highlight
+						background-color: #7B86FF
+						color: #ffffff
+						border-radius: 15px
+						padding: 5px 7px
+						margin-top: -5px
+				.line:not(:last-child)
+					margin-bottom: 10px
+			.card-description
+				.head
+					font-size: 18px
+					font-family: Nunito-SemiBold, sans-serif
+				.options
+					margin-top: 25px
+					.option
+						.title, .value
+							display: inline-block
+						.title
+							color: #7f88a6
+							width: 100px
+					.option:not(:last-child)
+						margin-bottom: 15px
+		.contact
+			width: 30%
+			button.b-btn
+				background-color: #4353ff
+				color: #ffffff
+				width: 100%
+				display: block
+				padding: 10px 15px
+				border: none
+				border-radius: 6px
+				cursor: pointer
+				transition: 0.5s
+				font-size: 16px
+				font-family: Nunito-Regular, sans-serif
+				&:hover
+					background-color: #7B86FF
+					color: #ffffff
+			.contact-buttons
+				padding: 0 15px
+				button
+					margin-bottom: 15px
+			.company-card
+				box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+				background-color: #fff
+				padding: 15px
+				margin-bottom: 25px
+				.card-header
+					button
+						padding: 5px
+						border: none
+						border-radius: 5px
+						background: none
+						cursor: pointer
+						transition: 0.25s
+						&:hover
+							background-color: #7B86FF
+							svg
+								stroke: #ffffff
+								path
+									stroke: #ffffff
+						svg
+							vertical-align: middle
+							width: 30px
+							height: 30px
+						svg, path
+							transition: 0.25s
+					.rate
+						float: right
+						svg
+							padding: 8px 5px 12px 5px
+							width: 20px
+							height: auto
+						span, svg
+							vertical-align: middle
+				.card-title
+					font-family: Nunito-SemiBold, sans-serif
+					margin: 10px 0
+				img.logo
+					margin: 0 auto 15px auto
+					display: block
+			
+		
