@@ -32,7 +32,7 @@ main section .content .items .item {
           box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
   background-color: #fff;
   padding: 15px 25px;
-  max-width: 26%;
+  max-width: 43%;
   cursor: pointer;
 }
 main section .content .items .item .card-header button {
@@ -368,7 +368,6 @@ main section form .search .icon:hover {
     padding: 0;
   }
   main section .content .items .item {
-    max-width: 43%;
     padding: 15px;
   }
   main section .content .items .item .card-header svg {
