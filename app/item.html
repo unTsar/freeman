@@ -8,8 +8,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/main-big-logo.png">
+
 	<link rel="stylesheet" href="css/hamburgers.min.css">
 	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="css/glightbox.min.css">
 	<link rel="stylesheet" href="css/item.css">
 
 </head>
@@ -32,7 +35,9 @@
 						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
 					</button>
 				</div>
-				<img src="images/dist/no-photo-placeholder.png" width="260" height="109" alt="images/dist/no-photo-placeholder.png">
+				<a href="images/dist/no-photo-placeholder.png" class="glightbox">
+					<img src="images/dist/no-photo-placeholder.png" width="260" height="109" alt="images/dist/no-photo-placeholder.png">
+				</a>
 				<div class="card-info">
 					<div class="line">
 						<span class="head">Заказчик</span>
@@ -99,7 +104,7 @@
 				</div>
 			</div>
 		</div>
-		<aside>
+		<aside class="mobile">
 			<a href="/item.html"><img src="images/dist/fair/img_def_rekl.png" alt="images/dist/fair/img_def_rekl.png"></a>
 			<a href="/item.html"><img src="images/dist/fair/img_def_rekl.png" alt="images/dist/fair/img_def_rekl.png"></a>
 			<a href="/item.html"><img src="images/dist/fair/img_def_rekl.png" alt="images/dist/fair/img_def_rekl.png"></a>
@@ -124,6 +129,12 @@
 				$(".dropdown").not(this).children("ul").slideUp(250);
 				$(".dropdown").not(this).removeClass("opened")
 			});
+		});
+	</script>
+
+	<script src="js/glightbox.min.js"></script>
+	<script type="text/javascript">
+		const lightbox = GLightbox({
 		});
 	</script>
 </body>

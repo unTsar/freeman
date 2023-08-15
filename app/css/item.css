@@ -1,3 +1,8 @@
+body.glightbox-open {
+  overflow-y: scroll;
+  position: fixed;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +68,11 @@ main .content .card .card-header button svg, main .content .card .card-header bu
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-main .content .card img {
+main .content .card a {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+main .content .card a img {
   display: block;
   margin: 0 auto 25px auto;
   max-width: 900px;
@@ -188,4 +197,65 @@ main .content .contact .company-card .card-title {
 main .content .contact .company-card img.logo {
   margin: 0 auto 15px auto;
   display: block;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1440px) {
+  main aside a img {
+    width: 150px;
+  }
+  main .content h2 {
+    font-size: 22px;
+  }
+  main .content .contact {
+    width: 40%;
+  }
+  main .content .card {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .content .contact, main .content .card {
+    width: 100%;
+  }
+  main .content .contact {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+  }
+  main aside {
+    width: 100%;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  main aside a {
+    display: inline-block;
+    width: 32%;
+  }
+  main aside a img {
+    width: 100%;
+  }
+  main aside:not(.mobile) {
+    display: none;
+  }
+  main .content {
+    padding: 0 15px 35px 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main aside a {
+    width: 49%;
+  }
+}
+@media screen and (max-width: 425px) {
+  main aside a {
+    width: 85%;
+  }
+  main aside a:not(:first-child) {
+    display: none;
+  }
 }
