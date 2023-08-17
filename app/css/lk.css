@@ -86,3 +86,20 @@ main .content .tabs button.selected {
   background-color: #4353ff;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0 15px 15px 15px;
+  }
+  main h2 {
+    font-size: 22px;
+  }
+  main .container.flex {
+    display: block;
+  }
+  main .container.flex .sidebar {
+    width: 100%;
+    min-width: auto;
+    margin-bottom: 15px;
+  }
+}

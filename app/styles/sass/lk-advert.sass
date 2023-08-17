@@ -110,12 +110,102 @@ main
 				.head
 					font-family: Nunito-SemiBold, sans-serif
 					font-size: 18px
+					margin-bottom: 15px
 				img
 					position: absolute
 					bottom: 36px
 					right: 36px
 					width: 100px
 					transform: rotate(25deg)
-			
-
-
+@media screen and (max-width: 1440px)
+	main
+		.content
+			.advert-section
+				.item
+					width: 37%
+@media screen and (max-width: 1200px)
+	main
+		.content
+			.plans-section
+				.plans-top
+					display: block
+					.current
+						margin-bottom: 15px
+@media screen and (max-width: 1024px)						
+	main
+		.content
+			.plans-section
+				.plans-bottom
+					display: block
+					.plan:not(:last-child)
+						margin-right: 0
+						margin-bottom: 15px
+					.plan
+						width: 60%
+			.advert-section
+				padding-right: 0
+				.container
+					gap: 15px 2%
+					.item
+						width: 49%
+						box-sizing: border-box
+@media screen and (max-width: 768px)
+	main
+		.content
+			.plans-section
+				.plans-top
+					.card
+						padding: 15px
+					.current
+						.title
+							margin-bottom: 20px
+							svg
+								width: 40px
+								height: 40px
+			.advert-section
+				.container
+					display: flex
+@media screen and (max-width: 576px)
+	main
+		.content
+			font-size: 16px
+			.plans-section
+				.plans-top
+					.current
+						.title
+							span
+								font-size: 18px
+					.select
+						.selector-sub
+							font-size: 16px
+						.selector
+							margin-bottom: 15px
+							flex-wrap: wrap
+							gap: 15px
+							.item
+								.sub
+									font-size: 16px
+								.title
+									svg
+										width: 30px
+										height: 30px
+									span
+										font-size: 18px
+				.plans-bottom
+					.plan
+						width: 100%
+						box-sizing: border-box
+						padding: 15px
+						.title
+							svg
+								width: 45px
+								height: 45px
+							.name 
+								font-size: 18px
+			.advert-section
+				.container
+					display: block
+					.item
+						width: 100%
+					.item:not(:last-child)
+						margin-bottom: 15px

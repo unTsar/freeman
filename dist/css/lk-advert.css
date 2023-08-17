@@ -156,6 +156,7 @@ main .content .advert-section .item:hover {
 main .content .advert-section .item .head {
   font-family: Nunito-SemiBold, sans-serif;
   font-size: 18px;
+  margin-bottom: 15px;
 }
 main .content .advert-section .item img {
   position: absolute;
@@ -165,4 +166,107 @@ main .content .advert-section .item img {
   -webkit-transform: rotate(25deg);
       -ms-transform: rotate(25deg);
           transform: rotate(25deg);
+}
+
+@media screen and (max-width: 1440px) {
+  main .content .advert-section .item {
+    width: 37%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  main .content .plans-section .plans-top {
+    display: block;
+  }
+  main .content .plans-section .plans-top .current {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .content .plans-section .plans-bottom {
+    display: block;
+  }
+  main .content .plans-section .plans-bottom .plan:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  main .content .plans-section .plans-bottom .plan {
+    width: 60%;
+  }
+  main .content .advert-section {
+    padding-right: 0;
+  }
+  main .content .advert-section .container {
+    gap: 15px 2%;
+  }
+  main .content .advert-section .container .item {
+    width: 49%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .content .plans-section .plans-top .card {
+    padding: 15px;
+  }
+  main .content .plans-section .plans-top .current .title {
+    margin-bottom: 20px;
+  }
+  main .content .plans-section .plans-top .current .title svg {
+    width: 40px;
+    height: 40px;
+  }
+  main .content .advert-section .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .content {
+    font-size: 16px;
+  }
+  main .content .plans-section .plans-top .current .title span {
+    font-size: 18px;
+  }
+  main .content .plans-section .plans-top .select .selector-sub {
+    font-size: 16px;
+  }
+  main .content .plans-section .plans-top .select .selector {
+    margin-bottom: 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 15px;
+  }
+  main .content .plans-section .plans-top .select .selector .item .sub {
+    font-size: 16px;
+  }
+  main .content .plans-section .plans-top .select .selector .item .title svg {
+    width: 30px;
+    height: 30px;
+  }
+  main .content .plans-section .plans-top .select .selector .item .title span {
+    font-size: 18px;
+  }
+  main .content .plans-section .plans-bottom .plan {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 15px;
+  }
+  main .content .plans-section .plans-bottom .plan .title svg {
+    width: 45px;
+    height: 45px;
+  }
+  main .content .plans-section .plans-bottom .plan .title .name {
+    font-size: 18px;
+  }
+  main .content .advert-section .container {
+    display: block;
+  }
+  main .content .advert-section .container .item {
+    width: 100%;
+  }
+  main .content .advert-section .container .item:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }

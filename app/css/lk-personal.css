@@ -100,6 +100,7 @@ main .content .card .buttons {
 }
 main .content .card .buttons button:first-child {
   margin-right: 15px;
+  margin-bottom: 15px;
 }
 main .content .card .buttons button {
   border: 1px solid #ccc;
@@ -119,9 +120,6 @@ main .content .card .buttons button:hover {
 main .content .card .buttons button.b-btn {
   background-color: #4353ff;
   color: #fff;
-}
-main .content .personal-info .data {
-  min-width: 350px;
 }
 main .content .personal-info .data .line:not(:last-child) {
   margin-bottom: 15px;
@@ -194,7 +192,7 @@ main .content .company-info .data p {
   margin: 10px 0;
 }
 main .content .company-info .data .line {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 main .content .company-info .data .line span.title {
   width: 100px;
@@ -242,4 +240,41 @@ main .content .category .form-section input {
 main .content .category .form-section input, main .content .category .form-section label {
   cursor: pointer;
   vertical-align: middle;
+}
+
+@media screen and (max-width: 1200px) {
+  main .content {
+    display: block;
+  }
+  main .content .content-left, main .content .content-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .content .progress {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main .content .progress .value {
+    font-size: 25px;
+  }
+  main .content .progress .progress-bar .square {
+    width: 20px;
+    height: 20px;
+  }
+  main .content .company-info .company-head .logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 425px) {
+  main .container .content {
+    font-size: 16px;
+  }
+  main .container .content .card .head {
+    font-size: 16px;
+  }
+  main .container .content .card .buttons button {
+    width: 100%;
+  }
 }
