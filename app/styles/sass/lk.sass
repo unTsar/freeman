@@ -1,0 +1,49 @@
+main
+	padding: 0 30px 15px 30px
+	h2
+		font-size: 25px
+		width: 100%
+		text-align: center
+	.sidebar
+		min-width: 240px
+		width: 240px
+		box-sizing: border-box
+		padding-right: 15px
+		ul
+			list-style: none
+			li:not(:last-child)
+				margin-bottom: 10px
+			li
+				a
+					display: inline-block
+					border-radius: 6px
+					border: 1px solid #ccc
+					background-color: #fff
+					padding: 10px 15px
+					width: 100%
+					box-sizing: border-box
+					text-align: left
+					font-size: 16px
+					font-family: Nunito-Regular, sans-serif
+					transition: 0.25s
+					&:hover
+						background-color: #4353ff
+						color: #fff 
+						svg
+							path
+								fill: #fff
+					svg
+						width: 20px
+						height: 20px
+						margin-right: 5px
+						margin-bottom: 2px
+						path
+							transition: 0.25s
+					svg, span
+						vertical-align: middle
+				a.active
+					background-color: #4353ff
+					color: #fff
+					svg
+						path
+							fill: #fff
