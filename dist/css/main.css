@@ -507,13 +507,14 @@ footer nav {
   width: 35em;
 }
 footer nav ul li {
-  display: inline-block;
+  display: block;
 }
 footer nav ul li a {
   color: #7f88a6;
 }
 footer nav ul li:not(:last-child) {
   margin-right: 25px;
+  margin-bottom: 5px;
 }
 footer .contacts {
   text-align: right;
@@ -578,14 +579,16 @@ footer iframe {
             flex-direction: column;
   }
   footer nav {
+    width: 100%;
     margin-bottom: 7px;
-    width: 34em;
+    text-align: center;
   }
   footer nav ul li:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 0;
   }
   footer .contacts {
     width: 100%;
+    text-align: center;
   }
   footer iframe {
     display: none;
