@@ -290,6 +290,7 @@ header
 						pointer-events: auto
 						transform: none
 			li > ul
+				overflow: hidden
 				position: absolute
 				top: 100%
 				width: 360px
@@ -299,6 +300,8 @@ header
 				opacity: 0
 				pointer-events: none
 				background-color: #fff
+				li:not(:last-child)
+					margin: 0
 				li
 					width: 100%
 					a
@@ -316,7 +319,7 @@ footer
 		font-size: 20px
 	.content
 		align-items: start
-		justify-content: space-between
+		justify-content: center
 	nav
 		text-align: left
 		width: 35em
@@ -337,15 +340,33 @@ footer
 		display: block
 		margin-left: auto
 		margin-bottom: 25px
+		margin-top: 15px
 
 
 @media screen and (max-width: 1024px)
+	header
+		.header-menu
+			ul
+				li > ul
+					width: 190px
 	footer
 		font-size: 16px
 		span.copy
 			font-size: 18px
 		nav
 			margin-bottom: 15px
+			width: auto
+			text-align: center
+			ul
+				li:not(:last-child)
+					margin-right: 0
+		.contacts
+			text-align: center
+			iframe
+				margin: 15px auto
+		.content
+			display: block
+
 
 @media screen and (max-width: 768px)
 	.mobile-menu
@@ -372,20 +393,9 @@ footer
 			display: none
 	footer
 		padding: 15px
-		.content
-			flex-direction: column
-		nav
-			width: 100%
-			margin-bottom: 7px
-			text-align: center
-			ul 
-				li:not(:last-child)
-					margin-right: 0
 		.contacts
-			width: 100%
-			text-align: center
-		iframe
-			display: none
+			iframe
+				width: 100%
 
 @media screen and (max-width: 576px)
 	.popup

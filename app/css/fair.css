@@ -115,23 +115,24 @@ main section form .row:not(:last-child) {
   padding-bottom: 15px;
   border-bottom: 1px solid #cccccc;
 }
-main section form button {
+main section form button, main section form a {
   font-family: Nunito-Regular, sans-serif;
   font-size: 16px;
   border: none;
   outline: none;
   cursor: pointer;
 }
-main section form button svg, main section form button span {
+main section form button svg, main section form button span, main section form a svg, main section form a span {
   vertical-align: middle;
 }
 main section form button[type=reset] {
   margin-right: auto;
 }
-main section form button[type=button] {
+main section form button[type=button], main section form a {
   margin-right: 10px;
 }
 main section form .b-btn {
+  text-align: center;
   background-color: #4353ff;
   color: #ffffff;
   padding: 10px 15px;
@@ -142,6 +143,10 @@ main section form .b-btn {
 main section form .b-btn:hover {
   background-color: #7B86FF;
   color: #ffffff;
+}
+main section form a.b-btn {
+  padding: 14px 15px;
+  line-height: 15px;
 }
 main section form .ad-search {
   padding: 15px;
@@ -384,7 +389,7 @@ main section form .search .icon:hover {
   main section form .btn-sort, main section form .btn-ad-search {
     padding: 5px;
   }
-  main section form button[type=reset], main section form button[type=button] {
+  main section form button[type=reset], main section form button[type=button], main section form a {
     margin-right: 0;
   }
   main section form .search {

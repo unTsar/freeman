@@ -3,6 +3,24 @@ body.glightbox-open {
   position: fixed;
 }
 
+.popup-contacts .popup-content {
+  width: 100%;
+}
+.popup-contacts .head {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+}
+.popup-contacts .line {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.popup-contacts .line .title {
+  font-family: Nunito-SemiBold, sans-serif;
+}
+.popup-contacts .line .value {
+  float: right;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;

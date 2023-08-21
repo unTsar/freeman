@@ -460,6 +460,7 @@ header .header-menu ul li:hover ul {
           transform: none;
 }
 header .header-menu ul li > ul {
+  overflow: hidden;
   position: absolute;
   top: 100%;
   width: 360px;
@@ -472,6 +473,9 @@ header .header-menu ul li > ul {
   opacity: 0;
   pointer-events: none;
   background-color: #fff;
+}
+header .header-menu ul li > ul li:not(:last-child) {
+  margin: 0;
 }
 header .header-menu ul li > ul li {
   width: 100%;
@@ -498,9 +502,9 @@ footer .content {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 footer nav {
   text-align: left;
@@ -527,9 +531,13 @@ footer iframe {
   display: block;
   margin-left: auto;
   margin-bottom: 25px;
+  margin-top: 15px;
 }
 
 @media screen and (max-width: 1024px) {
+  header .header-menu ul li > ul {
+    width: 190px;
+  }
   footer {
     font-size: 16px;
   }
@@ -538,6 +546,20 @@ footer iframe {
   }
   footer nav {
     margin-bottom: 15px;
+    width: auto;
+    text-align: center;
+  }
+  footer nav ul li:not(:last-child) {
+    margin-right: 0;
+  }
+  footer .contacts {
+    text-align: center;
+  }
+  footer .contacts iframe {
+    margin: 15px auto;
+  }
+  footer .content {
+    display: block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -572,26 +594,8 @@ footer iframe {
   footer {
     padding: 15px;
   }
-  footer .content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  footer nav {
+  footer .contacts iframe {
     width: 100%;
-    margin-bottom: 7px;
-    text-align: center;
-  }
-  footer nav ul li:not(:last-child) {
-    margin-right: 0;
-  }
-  footer .contacts {
-    width: 100%;
-    text-align: center;
-  }
-  footer iframe {
-    display: none;
   }
 }
 @media screen and (max-width: 576px) {

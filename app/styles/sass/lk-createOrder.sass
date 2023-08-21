@@ -1,0 +1,90 @@
+main
+	.content
+		width: 50%
+		margin: 0 auto
+		box-sizing: border-box
+		form
+			padding-bottom: 25px
+			.form-section
+				margin-bottom: 15px
+				label
+					display: block
+					font-family: Nunito-SemiBold, sans-serif
+					font-size: 16px
+					margin-bottom: 10px
+					.req
+						color: red
+			input, select, textarea, button
+				font-family: Nunito-Regular, sans-serif
+				font-size: 16px
+				color: #33324e
+				padding: 10px 15px
+				margin: 0
+				border: 1px solid #ccc
+				width: 100%
+				box-sizing: border-box
+				outline: none
+			label
+				-webkit-touch-callout: none
+				-webkit-user-select: none
+				-khtml-user-select: none
+				-moz-user-select: none
+				-ms-user-select: none
+				user-select: none
+			textarea
+				resize: none
+			button
+				background-color: #4353ff
+				border: none
+				border-radius: 6px
+				color: #fff
+				width: auto
+				display: block
+				margin: 0 auto
+				cursor: pointer
+			.price
+				display: flex
+				flex-wrap: wrap
+				gap: 2%
+				.form-section
+					width: 49%
+					input
+						padding: 11px 15px
+				.checkbox
+					width: 100%
+					margin-bottom: 20px
+					input, label
+						vertical-align: middle
+						cursor: pointer
+					input 
+						display: inline-block
+						width: auto
+						width: 20px
+						height: 20px
+						margin-right: 5px
+@media screen and (max-width: 1440px)
+	main
+		.content
+			width: 70%
+@media screen and (max-width: 1024px)
+	main
+		.content
+			width: 100%
+			margin: 0
+			padding: 0 30px
+@media screen and (max-width: 768px)
+	main
+		.sidebar
+			margin-top: 25px
+		.content
+			padding: 0
+@media screen and (max-width: 425px)
+	main
+		.content
+			form
+				.price
+					display: block
+					.form-section
+						width: 100%
+				input[type=file]
+					font-size: 14px

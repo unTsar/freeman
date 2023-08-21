@@ -83,7 +83,7 @@ main
 				justify-content: space-between
 				padding-bottom: 15px
 				border-bottom: 1px solid #cccccc
-			button
+			button, a
 				font-family: Nunito-Regular, sans-serif
 				font-size: 16px
 				border: none
@@ -93,9 +93,10 @@ main
 					vertical-align: middle
 			button[type=reset]
 				margin-right: auto
-			button[type=button]
+			button[type=button], a
 				margin-right: 10px
 			.b-btn
+				text-align: center
 				background-color: #4353ff
 				color: #ffffff
 				padding: 10px 15px
@@ -104,6 +105,9 @@ main
 			.b-btn:hover
 				background-color: #7B86FF
 				color: #ffffff
+			a.b-btn
+				padding: 14px 15px
+				line-height: 15px
 			.ad-search
 				padding: 15px
 				display: none
@@ -287,7 +291,7 @@ main
 					flex-wrap: wrap
 				.btn-sort, .btn-ad-search
 					padding: 5px
-				button[type=reset], button[type=button]
+				button[type=reset], button[type=button], a
 					margin-right: 0
 				.search
 					width: 100%

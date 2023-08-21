@@ -17,6 +17,25 @@
 
 </head>
 <body>
+	<div class="popup popup-contacts" id="popupContacts">
+		<div class="popup-wrap">
+			<div class="popup-content">
+				<button type="button" class="cross popup-close__btn">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+				</button>
+				<h3>Контакты</h3>
+				<div class="head">Имя</div>
+				<div class="line">
+					<span class="title">Телефон</span>
+					<a href="tel:+79999999999" class="value">+7(999)999-99-99</a>
+				</div>
+				<div class="line">
+					<span class="title">E-mail</span>
+					<a href="mailto:mail@gmail.com" class="value">mail@gmail.com</a>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="popup popup-logIn">
 	<div class="popup-wrap">
 		<div class="popup-content noselect">
@@ -263,7 +282,7 @@
 					</button>
 				</div>
 				<div class="contact-buttons">
-					<button type="button" class="b-btn">
+					<button type="button" class="b-btn contacts__btn">
 						<span>Показать контакты</span>
 					</button>
 					<button type="button" class="b-btn">
@@ -279,24 +298,24 @@
 		</aside>
 	</main>
 	<footer>
-    <div class="content flex">
-        <nav>
-            <ul>
-                <li><a href="/">Об агентской деятельности</a></li>
-                <li><a href="/">Публичная оферта</a></li>
-                <li><a href="/">Политика конфиденциальности</a></li>
-                <li><a href="/">Реквизиты</a></li>
-                <li><a href="/">Прайс</a></li>
-                <li><a href="/">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="contacts">
-            <a href="tel:+79999999999">+7 (999) 999-99-99</a>
-            <a href="mailto:mail@yandex.ru">mail@yandex.ru</a>
-        </div>
-    </div>
-    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A449373fd8b314cc34468f1f049f493cc528b9e18bf7880ea9f16eb30242cd58e&amp;source=constructor" width="600" height="250" frameborder="0"></iframe>
-    <span class="copy">&copy; «Название», 2015-2023</span>
+	<div class="content flex">
+		<nav>
+			<ul>
+				<li><a href="/">Об агентской деятельности</a></li>
+				<li><a href="/">Публичная оферта</a></li>
+				<li><a href="/">Политика конфиденциальности</a></li>
+				<li><a href="/">Реквизиты</a></li>
+				<li><a href="/">Прайс</a></li>
+				<li><a href="/">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="contacts">
+			<a href="tel:+79999999999">+7 (999) 999-99-99</a>
+			<a href="mailto:mail@yandex.ru">mail@yandex.ru</a>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A449373fd8b314cc34468f1f049f493cc528b9e18bf7880ea9f16eb30242cd58e&amp;source=constructor" width="600" height="250" frameborder="0"></iframe>
+		</div>
+	</div>
+	<span class="copy">&copy; «Название», 2015-2023</span>
 </footer>
 	<script src="js/jquery.min.js"></script>
 	<!-- header -->
@@ -305,6 +324,15 @@
 	<script src="js/glightbox.min.js"></script>
 	<script type="text/javascript">
 		const lightbox = GLightbox({
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".contacts__btn").click(function(){
+				$("#popupContacts").fadeIn(250);
+				$("body").addClass("fixed");
+				$(".popup").not("#popupContacts").fadeOut(250);
+			});
 		});
 	</script>
 </body>
