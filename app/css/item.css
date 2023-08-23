@@ -32,11 +32,13 @@ main h2 {
   font-size: 25px;
 }
 main aside {
-  padding-top: 70px;
-  padding: 0 15px 15px 15px;
+  padding: 70px 15px 25px 15px;
 }
-main aside a img {
+main aside .reclam {
   width: 200px;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
 }
 main .content {
   -ms-flex-wrap: wrap;
@@ -219,7 +221,10 @@ main .content .contact .company-card img.logo {
 }
 
 @media screen and (max-width: 1440px) {
-  main aside a img {
+  main aside {
+    padding-top: 65px;
+  }
+  main aside .reclam {
     width: 150px;
   }
   main .content h2 {
@@ -246,15 +251,12 @@ main .content .contact .company-card img.logo {
   }
   main aside {
     width: 100%;
-    text-align: center;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    padding-top: 0;
   }
-  main aside a {
-    display: inline-block;
-    width: 32%;
-  }
-  main aside a img {
+  main aside .reclam {
+    height: 150px;
     width: 100%;
   }
   main aside:not(.mobile) {

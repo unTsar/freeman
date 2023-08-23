@@ -1,5 +1,7 @@
 main
-	padding: 0 30px 65px 30px
+	padding-left: 30px
+	padding-right: 30px
+	padding-bottom: 65px
 	font-size: 16px
 	h2
 		font-size: 25px
@@ -110,7 +112,6 @@ main
 				line-height: 15px
 			.ad-search
 				padding: 15px
-				display: none
 				.selects
 					select
 						outline: none
@@ -158,15 +159,7 @@ main
 					input[type='number'], input[type="number"]:hover, input[type="number"]:focus
 						appearance: none
 						-moz-appearance: textfield
-			.btn-ad-search
-				display: block
-				margin-left: auto
-				svg
-					transition: 0.15s
-			.btn-ad-search.opened
-				svg
-					transform: rotate(-180deg)
-			.btn-sort, .btn-ad-search
+			.btn-sort
 				background-color: #fff
 				color: #7B86FF
 				padding: 6px 15px
@@ -288,7 +281,7 @@ main
 			form
 				.row:not(:last-child)
 					flex-wrap: wrap
-				.btn-sort, .btn-ad-search
+				.btn-sort
 					padding: 5px
 				button[type=reset], button[type=button], a
 					margin-right: 0
@@ -319,7 +312,9 @@ main
 						max-width: none
 @media screen and (max-width: 768px)
 	main
-		padding: 0 15px 35px 15px
+		padding-left: 15px
+		padding-right: 15px
+		padding-bottom: 35px
 		section
 			form
 				.sort-options

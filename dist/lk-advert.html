@@ -220,7 +220,7 @@
 					<button type="button" class="selected advert__toggleView" id="plans__btn">Подписка</button>
 					<button type="button" class="advert__toggleView" id="advert__btn">Реклама</button>
 				</div>
-				<div class="section advert-section">
+				<div class="section ad-section">
 					<div class="container flex">
 						<a href="" class="item">
 							<div class="head">Размещение логотипа компании</div>
@@ -351,10 +351,10 @@
 			});
 			$("#plans__btn").click(function(){
 				$(".plans-section").addClass("selected");
-				$(".advert-section").removeClass("selected");
+				$(".ad-section").removeClass("selected");
 			});
 			$("#advert__btn").click(function(){
-				$(".advert-section").addClass("selected");
+				$(".ad-section").addClass("selected");
 				$(".plans-section").removeClass("selected");
 			});
 

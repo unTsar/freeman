@@ -1,5 +1,7 @@
 main {
-  padding: 0 30px 65px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 65px;
   font-size: 16px;
 }
 main h2 {
@@ -9,12 +11,11 @@ main h2 {
 main section .content {
   padding-top: 25px;
 }
-main section .content aside img {
+main section .content aside .reclam {
   width: 200px;
-}
-main section .content aside a {
-  display: block;
-  padding: 5px 0;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
 }
 main section .content .items {
   -webkit-box-pack: center;
@@ -24,15 +25,16 @@ main section .content .items {
       align-content: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 15px;
+  gap: 20px 2%;
 }
 main section .content .items .item {
   -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
           box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
   background-color: #fff;
   padding: 15px 25px;
-  max-width: 43%;
+  max-width: 31%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
 }
 main section .content .items .item .card-header button {
@@ -150,7 +152,6 @@ main section form a.b-btn {
 }
 main section form .ad-search {
   padding: 15px;
-  display: none;
 }
 main section form .ad-search .selects select {
   outline: none;
@@ -214,25 +215,12 @@ main section form .ad-search .inputs input[type=number], main section form .ad-s
           appearance: none;
   -moz-appearance: textfield;
 }
-main section form .btn-ad-search {
-  display: block;
-  margin-left: auto;
-}
-main section form .btn-ad-search svg {
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-}
-main section form .btn-ad-search.opened svg {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-main section form .btn-sort, main section form .btn-ad-search {
+main section form .btn-sort {
   background-color: #fff;
   color: #7B86FF;
   padding: 6px 15px;
 }
-main section form .btn-sort svg, main section form .btn-ad-search svg {
+main section form .btn-sort svg {
   width: 30px;
   height: 30px;
   padding-bottom: 1px;
@@ -367,14 +355,9 @@ main section form .search .icon:hover {
   main section form .ad-search .selects select {
     padding: 5px 10px;
   }
-  main section .content .items {
-    -webkit-column-gap: 5px;
-       -moz-column-gap: 5px;
-            column-gap: 5px;
-    padding: 0;
-  }
   main section .content .items .item {
     padding: 15px;
+    max-width: 48%;
   }
   main section .content .items .item .card-header svg {
     width: 25px;
@@ -386,7 +369,7 @@ main section form .search .icon:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  main section form .btn-sort, main section form .btn-ad-search {
+  main section form .btn-sort {
     padding: 5px;
   }
   main section form button[type=reset], main section form button[type=button], main section form a {
@@ -415,7 +398,7 @@ main section form .search .icon:hover {
   main section form .ad-search .inputs .checkbox-area {
     width: 100%;
   }
-  main section .content aside img {
+  main section .content aside .reclam {
     width: 150px;
   }
   main section .content .items {
@@ -427,7 +410,9 @@ main section form .search .icon:hover {
 }
 @media screen and (max-width: 768px) {
   main {
-    padding: 0 15px 35px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 35px;
   }
   main section form .sort-options {
     left: 5px;
@@ -437,12 +422,12 @@ main section form .search .icon:hover {
   }
   main section .content .items {
     padding: 0;
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    -webkit-column-gap: 2%;
+       -moz-column-gap: 2%;
+            column-gap: 2%;
   }
   main section .content .items .item {
-    max-width: 43%;
+    max-width: 48%;
   }
   main section .content .items .item.mobile-adv {
     width: 100%;

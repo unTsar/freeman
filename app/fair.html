@@ -51,11 +51,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<button type="button" class="btn-ad-search">
-						<span>Расширенный поиск</span>
-						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7 10L12 15L17 10" stroke="#7B86FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
-					</button>
-					<div class="ad-search" id="ad-search">
+					<div class="ad-search">
 						<div class="selects flex">
 							<select name="rank">
 								<option value="">Категория</option>
@@ -318,10 +314,6 @@
 				if(!$("#sort").is(e.target) && $("#sort").has(e.target).length === 0){
 					$("#sort-options").addClass("hidden");
 				}
-			});
-			$(".btn-ad-search").click(function(){
-				$("#ad-search").slideToggle(250);
-				$(this).toggleClass("opened");
 			});
 		});
 	</script>

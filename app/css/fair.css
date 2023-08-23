@@ -1,5 +1,7 @@
 main {
-  padding: 0 30px 65px 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 65px;
   font-size: 16px;
 }
 main h2 {
@@ -150,7 +152,6 @@ main section form a.b-btn {
 }
 main section form .ad-search {
   padding: 15px;
-  display: none;
 }
 main section form .ad-search .selects select {
   outline: none;
@@ -214,25 +215,12 @@ main section form .ad-search .inputs input[type=number], main section form .ad-s
           appearance: none;
   -moz-appearance: textfield;
 }
-main section form .btn-ad-search {
-  display: block;
-  margin-left: auto;
-}
-main section form .btn-ad-search svg {
-  -webkit-transition: 0.15s;
-  transition: 0.15s;
-}
-main section form .btn-ad-search.opened svg {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-main section form .btn-sort, main section form .btn-ad-search {
+main section form .btn-sort {
   background-color: #fff;
   color: #7B86FF;
   padding: 6px 15px;
 }
-main section form .btn-sort svg, main section form .btn-ad-search svg {
+main section form .btn-sort svg {
   width: 30px;
   height: 30px;
   padding-bottom: 1px;
@@ -381,7 +369,7 @@ main section form .search .icon:hover {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  main section form .btn-sort, main section form .btn-ad-search {
+  main section form .btn-sort {
     padding: 5px;
   }
   main section form button[type=reset], main section form button[type=button], main section form a {
@@ -422,7 +410,9 @@ main section form .search .icon:hover {
 }
 @media screen and (max-width: 768px) {
   main {
-    padding: 0 15px 35px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 35px;
   }
   main section form .sort-options {
     left: 5px;

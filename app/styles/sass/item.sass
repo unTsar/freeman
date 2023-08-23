@@ -21,11 +21,12 @@ main
 		text-align: center
 		font-size: 25px
 	aside
-		padding-top: 70px
-		padding: 0 15px 15px 15px
-		a
-			img
-				width: 200px
+		padding: 70px 15px 25px 15px
+		.reclam
+			width: 200px
+			height: 100%
+			background-color: gray
+			opacity: 0.3
 	.content
 		flex-wrap: wrap
 		padding-bottom: 35px
@@ -162,9 +163,9 @@ main
 @media screen and (max-width: 1440px)
 	main
 		aside
-			a
-				img
-					width: 150px
+			padding-top: 65px
+			.reclam
+				width: 150px
 		.content 
 			h2
 				font-size: 22px
@@ -184,13 +185,11 @@ main
 		display: block
 		aside
 			width: 100%
-			text-align: center
 			box-sizing: border-box
-			a
-				display: inline-block
-				width: 32%
-				img
-					width: 100%
+			padding-top: 0
+			.reclam
+				height: 150px
+				width: 100%
 		aside:not(.mobile)
 			display: none
 		.content

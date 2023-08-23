@@ -127,18 +127,18 @@ main .content .plans-section .plans-bottom .plan button {
   border-radius: 6px;
   margin-top: 25px;
 }
-main .content .advert-section {
+main .content .ad-section {
   width: 100%;
   padding-right: 150px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-main .content .advert-section .container {
+main .content .ad-section .container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
 }
-main .content .advert-section .item {
+main .content .ad-section .item {
   position: relative;
   display: inline-block;
   -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
@@ -148,17 +148,17 @@ main .content .advert-section .item {
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
-main .content .advert-section .item:hover {
+main .content .ad-section .item:hover {
   color: #33324e;
   -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.3);
           box-shadow: 0 0 40px rgba(95, 125, 149, 0.3);
 }
-main .content .advert-section .item .head {
+main .content .ad-section .item .head {
   font-family: Nunito-SemiBold, sans-serif;
   font-size: 18px;
   margin-bottom: 15px;
 }
-main .content .advert-section .item img {
+main .content .ad-section .item img {
   position: absolute;
   bottom: 36px;
   right: 36px;
@@ -169,7 +169,7 @@ main .content .advert-section .item img {
 }
 
 @media screen and (max-width: 1440px) {
-  main .content .advert-section .item {
+  main .content .ad-section .item {
     width: 37%;
   }
 }
@@ -197,13 +197,13 @@ main .content .advert-section .item img {
   main .content .plans-section .plans-bottom .plan {
     width: 60%;
   }
-  main .content .advert-section {
+  main .content .ad-section {
     padding-right: 0;
   }
-  main .content .advert-section .container {
+  main .content .ad-section .container {
     gap: 15px 2%;
   }
-  main .content .advert-section .container .item {
+  main .content .ad-section .container .item {
     width: 49%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -220,7 +220,7 @@ main .content .advert-section .item img {
     width: 40px;
     height: 40px;
   }
-  main .content .advert-section .container {
+  main .content .ad-section .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -262,13 +262,13 @@ main .content .advert-section .item img {
   main .content .plans-section .plans-bottom .plan .title .name {
     font-size: 18px;
   }
-  main .content .advert-section .container {
+  main .content .ad-section .container {
     display: block;
   }
-  main .content .advert-section .container .item {
+  main .content .ad-section .container .item {
     width: 100%;
   }
-  main .content .advert-section .container .item:not(:last-child) {
+  main .content .ad-section .container .item:not(:last-child) {
     margin-bottom: 15px;
   }
 }
