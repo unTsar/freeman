@@ -9,12 +9,11 @@ main h2 {
 main section .content {
   padding-top: 25px;
 }
-main section .content aside img {
+main section .content aside .reclam {
   width: 200px;
-}
-main section .content aside a {
-  display: block;
-  padding: 5px 0;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
 }
 main section .content .items {
   -webkit-box-pack: center;
@@ -24,15 +23,16 @@ main section .content .items {
       align-content: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
-  padding: 0 15px;
+  gap: 20px 2%;
 }
 main section .content .items .item {
   -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
           box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
   background-color: #fff;
   padding: 15px 25px;
-  max-width: 43%;
+  max-width: 31%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   cursor: pointer;
 }
 main section .content .items .item .card-header button {
@@ -367,14 +367,9 @@ main section form .search .icon:hover {
   main section form .ad-search .selects select {
     padding: 5px 10px;
   }
-  main section .content .items {
-    -webkit-column-gap: 5px;
-       -moz-column-gap: 5px;
-            column-gap: 5px;
-    padding: 0;
-  }
   main section .content .items .item {
     padding: 15px;
+    max-width: 48%;
   }
   main section .content .items .item .card-header svg {
     width: 25px;
@@ -415,7 +410,7 @@ main section form .search .icon:hover {
   main section form .ad-search .inputs .checkbox-area {
     width: 100%;
   }
-  main section .content aside img {
+  main section .content aside .reclam {
     width: 150px;
   }
   main section .content .items {
@@ -437,12 +432,12 @@ main section form .search .icon:hover {
   }
   main section .content .items {
     padding: 0;
-    -webkit-column-gap: 15px;
-       -moz-column-gap: 15px;
-            column-gap: 15px;
+    -webkit-column-gap: 2%;
+       -moz-column-gap: 2%;
+            column-gap: 2%;
   }
   main section .content .items .item {
-    max-width: 43%;
+    max-width: 48%;
   }
   main section .content .items .item.mobile-adv {
     width: 100%;

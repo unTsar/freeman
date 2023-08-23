@@ -8,22 +8,22 @@ main
 		.content
 			padding-top: 25px
 			aside
-				img
+				.reclam
 					width: 200px
-				a
-					display: block
-					padding: 5px 0
+					height: 100%
+					background-color: gray
+					opacity: 0.3
 			.items
 				justify-content: center
 				align-content: start
 				flex-wrap: wrap
-				gap: 20px
-				padding: 0 15px
+				gap: 20px 2%
 				.item
 					box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
 					background-color: #fff
 					padding: 15px 25px
-					max-width: 43%
+					max-width: 31%
+					box-sizing: border-box
 					cursor: pointer
 					.card-header
 						button
@@ -275,10 +275,9 @@ main
 							padding: 5px 10px
 			.content
 				.items
-					column-gap: 5px
-					padding: 0
 					.item
 						padding: 15px
+						max-width: 48%
 						.card-header
 							svg
 								width: 25px
@@ -312,7 +311,7 @@ main
 							width: 100%
 			.content
 				aside
-					img
+					.reclam
 						width: 150px
 				.items
 					padding: 0 15px
@@ -330,9 +329,9 @@ main
 					display: none
 				.items
 					padding: 0
-					column-gap: 15px
+					column-gap: 2%
 					.item
-						max-width: 43%
+						max-width: 48%
 					.item.mobile-adv
 						width: 100%
 						display: block
