@@ -10,6 +10,14 @@ main .content form {
 main .content form .form-section {
   margin-bottom: 15px;
 }
+main .content form .form-section .title-desc {
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+main .content form .form-section .title-desc > b {
+  font-family: Nunito-Bold, sans-serif;
+}
 main .content form .form-section label {
   display: block;
   font-family: Nunito-SemiBold, sans-serif;
@@ -51,7 +59,7 @@ main .content form button {
   margin: 0 auto;
   cursor: pointer;
 }
-main .content form .price {
+main .content form .price, main .content form .amount {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,26 +67,87 @@ main .content form .price {
       flex-wrap: wrap;
   gap: 2%;
 }
-main .content form .price .form-section {
+main .content form .price .form-section, main .content form .amount .form-section {
   width: 49%;
 }
-main .content form .price .form-section input {
+main .content form .price .form-section input, main .content form .amount .form-section input {
   padding: 11px 15px;
 }
-main .content form .price .checkbox {
+main .content form .price .checkbox, main .content form .amount .checkbox {
   width: 100%;
   margin-bottom: 20px;
 }
-main .content form .price .checkbox input, main .content form .price .checkbox label {
+main .content form .price .checkbox input, main .content form .price .checkbox label, main .content form .amount .checkbox input, main .content form .amount .checkbox label {
   vertical-align: middle;
   cursor: pointer;
 }
-main .content form .price .checkbox input {
+main .content form .price .checkbox input, main .content form .amount .checkbox input {
   display: inline-block;
   width: auto;
   width: 20px;
   height: 20px;
   margin-right: 5px;
+}
+main .content form .input-file input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  display: block;
+}
+main .content form .input-file input:disabled {
+  background-color: red;
+}
+main .content form .input-file .add-btn {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+}
+main .content form .input-file .add-btn svg {
+  width: 75px;
+  height: auto;
+}
+main .content form .input-file-list {
+  display: inline-block;
+}
+main .content form .input-file-list .input-file-list-item {
+  text-align: center;
+  display: inline-block;
+  width: 120px;
+  min-height: 120px;
+  overflow: hidden;
+  vertical-align: top;
+  position: relative;
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  margin-right: 15px;
+}
+main .content form .input-file-list .input-file-list-item .input-file-list-img {
+  height: 90px;
+}
+main .content form .input-file-list .input-file-list-item .input-file-list-name {
+  font-size: 12px;
+}
+main .content form .input-file-list .input-file-list-item .input-file-list-remove {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  position: absolute;
+  padding: 4px;
+  margin: 0;
+  top: 5px;
+  right: 5px;
+  background: #4353ff;
+  width: 17px;
+  height: 16px;
+  font-size: 16px;
+  font-family: Arial;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 1440px) {

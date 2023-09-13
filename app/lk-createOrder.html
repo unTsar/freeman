@@ -17,6 +17,7 @@
 <body>
 	<!--#include virtual="/parts/header.html" -->
 	<main>
+		<h2>Создать объявление</h2>
 		<div class="container flex">
 			<div class="sidebar">
 				<ul>
@@ -47,7 +48,6 @@
 				</ul>
 			</div>
 			<div class="content">
-				<h2>Создать объявление</h2>
 				<form action="" method="post">
 					<div class="form-section">
 						<label for="input-title">Заголовок<span class="req">*</span></label>
@@ -62,14 +62,86 @@
 							<option value="Категория 3">Категория 3</option>
 						</select>
 					</div>
+
 					<div class="form-section">
-						<label for="textarea-description">Описание<span class="req">*</span></label>
-						<textarea name="" id="textarea-description" cols="30" rows="10"></textarea>
+						<label class="input-file" for="input-file">
+							<p>Техническое задание и фото прикрепить здесь:</p>
+							<input type="file" name="" id="input-file" multiple="multiple">
+							<div class="input-file-list">
+
+							</div>
+							<div class="add-btn" id="add-file__btn">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25" fill="none"><mask id="mask0_134_377" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="25" height="25"><rect width="25" height="25" fill="url(#pattern0)"/></mask><g mask="url(#mask0_134_377)"><rect width="25" height="25" fill="#4353ff"/></g><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_134_377" transform="scale(0.00195312)"/></pattern><image id="image0_134_377" width="512" height="512" xlink:href="data:image/png;base64,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"/></defs></svg>
+							</div>
+						</label>
+						<!-- <div class="input-file-list">
+
+						</div> -->
+					</div>
+
+					<div class="form-section">
+						<label for="textarea-description1">Описание<span class="req">*</span></label>
+						<div class="title-desc">Как можно более подробно <b>опишите характеристики</b> изделия или материала.</div>
+						<textarea name="" id="textarea-description1" cols="30" rows="10"></textarea>
 					</div>
 					<div class="form-section">
-						<label for="input-file">Прикрепить фото</label>
-						<input type="file" name="" id="input-file">
+						<label for="textarea-description2">Описание<span class="req">*</span></label>
+						<div class="title-desc">Опишите <b>производственную мощность</b> предприятия, которое ищите (например: кол-во швей более 30, выпуск изделий от 1000 штук в месяц, требуется спец. оборудование...)</div>
+						<textarea name="" id="textarea-description2" cols="30" rows="10"></textarea>
 					</div>
+					<div class="form-section">
+						<label for="textarea-description3">Описание<span class="req">*</span></label>
+						<div class="title-desc">Опишите <b>область поиска</b> исполнителя: (Ивановская область; г. Санкт-Петербург; Республика Беларусия; ЦФО; только Россия; не более 1500 км от нас; не имеет значения)</div>
+						<textarea name="" id="textarea-description3" cols="30" rows="10"></textarea>
+					</div>
+					<div class="amount">
+						<div class="form-section">
+							<label for="input-amount1">Кол-во<span class="req">*</span></label>
+							<input type="number" name="" id="input-amount1">
+						</div>
+						<div class="form-section">
+							<label for="input-amount2">Ед.изм.<span class="req">*</span></label>
+							<select name="" id="input-amount2">
+								<option value="">Единицы измерения</option>
+								<option value="шт.">шт.</option>
+								<option value="метр">метр</option>
+								<option value="м. п.">м. п.</option>
+								<option value="комплект">комплект</option>
+								<option value="пар(а)">пар(а)</option>
+								<option value="кг">кг</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form-section">
+						<label for="select-material">Материалы</label>
+						<select name="" id="select-material">
+							<option value="">Выберите, кто предоставляет материалы</option>
+							<option value="Заказчик">Заказчик</option>
+							<option value="Исполнитель">Исполнитель</option>
+							<option value="По договорённости">По договорённости</option>
+						</select>
+					</div>
+					<div class="form-section">
+						<label for="select-cutting">Раскрой</label>
+						<select name="" id="select-cutting">
+							<option value="">Выберите, кто осуществляет раскрой</option>
+							<option value="Заказчик">Заказчик</option>
+							<option value="Исполнитель">Исполнитель</option>
+							<option value="По договорённости">По договорённости</option>
+						</select>
+					</div>
+					<div class="form-section">
+						<label for="select-logistic">Логистика</label>
+						<select name="" id="select-logistic">
+							<option value="">Выберите, кто занимается логистикой</option>
+							<option value="Заказчик">Заказчик</option>
+							<option value="Исполнитель">Исполнитель</option>
+							<option value="По договорённости">По договорённости</option>
+						</select>
+					</div>
+
+
 					<div class="price" id="price__inputs">
 						<div class="form-section">
 							<label for="input-price">Цена<span class="req">*</span></label>
@@ -89,6 +161,12 @@
 							<label for="price-checkbox">Цена договорная</label>
 						</div>
 					</div>
+
+					<div class="form-section">
+						<label for="input-date">Срок исполнения заказа<span class="req">*</span></label>
+						<input type="date" name="" id="input-date">
+					</div>
+
 					<div class="form-section">
 						<label for="input-adress">Адрес<span class="req">*</span></label>
 						<input type="text" name="" id="input-adress">
@@ -104,6 +182,7 @@
 					<button type="submit">Опубликовать</button>
 				</form>
 			</div>
+			
 		</div>
 	</main>
 	<!--#include virtual="/parts/footer.html" -->
@@ -120,6 +199,44 @@
 				}
 			});
 		});
+	</script>
+	<script>
+		// Add/Remove File
+		var dt = new DataTransfer();
+ 
+		$('.input-file input[type=file]').on('change', function(){
+			let $files_list = $(this).closest('.input-file').children('.input-file-list');
+			// $files_list.empty();
+		
+			for(var i = 0; i < this.files.length; i++){
+				let file = this.files.item(i);
+				dt.items.add(file);
+		
+				let reader = new FileReader();
+				reader.readAsDataURL(file);
+				reader.onloadend = function(){
+					let new_file_input = '<div class="input-file-list-item">' +
+						'<img class="input-file-list-img" src="' + reader.result + '">' +
+						'<span class="input-file-list-name">' + file.name + '</span>' +
+						'<a href="#" onclick="removeFilesItem(this); return false;" class="input-file-list-remove">&#10006</a>' +
+					'</div>';
+					$files_list.append(new_file_input); 
+				}
+			};
+			this.files = dt.files;
+		});
+		
+		function removeFilesItem(target){
+			let name = $(target).prev().text();
+			let input = $(target).closest('.form-section').find('input[type=file]');	
+			$(target).closest('.input-file-list-item').remove();	
+			for(let i = 0; i < dt.items.length; i++){
+				if(name === dt.items[i].getAsFile().name){
+					dt.items.remove(i);
+				}
+			}
+			input[0].files = dt.files;  
+		}
 	</script>
 </body>
 </html> 

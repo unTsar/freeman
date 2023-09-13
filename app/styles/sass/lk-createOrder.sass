@@ -7,6 +7,12 @@ main
 			padding-bottom: 25px
 			.form-section
 				margin-bottom: 15px
+				.title-desc
+					font-family: Nunito-Regular, sans-serif
+					font-size: 16px
+					margin-bottom: 10px
+				.title-desc > b
+					font-family: Nunito-Bold, sans-serif
 				label
 					display: block
 					font-family: Nunito-SemiBold, sans-serif
@@ -42,7 +48,7 @@ main
 				display: block
 				margin: 0 auto
 				cursor: pointer
-			.price
+			.price, .amount
 				display: flex
 				flex-wrap: wrap
 				gap: 2%
@@ -62,6 +68,58 @@ main
 						width: 20px
 						height: 20px
 						margin-right: 5px
+			.input-file
+				input
+					position: absolute
+					opacity: 0
+					width: 0
+					height: 0
+					display: block
+				input:disabled
+					background-color: red
+				.add-btn
+					border: 1px solid #ccc
+					border-radius: 5px
+					padding: 16px 20px
+					cursor: pointer
+					display: inline-block
+					vertical-align: top
+					svg
+						width: 75px
+						height: auto
+			.input-file-list
+				display: inline-block
+				.input-file-list-item
+					text-align: center
+					display: inline-block
+					width: 120px
+					min-height: 120px
+					overflow: hidden
+					vertical-align: top
+					position: relative
+					box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+					margin-right: 15px
+					.input-file-list-img
+						height: 90px
+					.input-file-list-name
+						font-size: 12px
+					.input-file-list-remove
+						color: #fff
+						text-decoration: none
+						display: inline-block
+						position: absolute
+						padding: 4px
+						margin: 0
+						top: 5px
+						right: 5px
+						background: #4353ff
+						width: 17px
+						height: 16px
+						font-size: 16px
+						font-family: Arial
+						text-align: center
+						line-height: 16px
+						border-radius: 50%
 @media screen and (max-width: 1440px)
 	main
 		.content
