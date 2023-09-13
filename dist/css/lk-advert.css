@@ -19,7 +19,7 @@ main .content .plans-section .plans-top {
   margin-bottom: 25px;
 }
 main .content .plans-section .plans-top .card {
-  padding: 25px 30px;
+  padding: 25px 15px;
 }
 main .content .plans-section .plans-top .current {
   display: -webkit-box;
@@ -55,14 +55,37 @@ main .content .plans-section .plans-top .select .selector {
           justify-content: space-evenly;
   margin-bottom: 25px;
 }
+main .content .plans-section .plans-top .select .selector .item.selected {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .plans-section .plans-top .select .selector .item.selected svg path {
+  fill: #fff;
+}
 main .content .plans-section .plans-top .select .selector .item {
   text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 15px;
+}
+main .content .plans-section .plans-top .select .selector .item:hover {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .plans-section .plans-top .select .selector .item:hover svg path {
+  fill: #fff;
 }
 main .content .plans-section .plans-top .select .selector .item .title {
   margin-bottom: 10px;
 }
 main .content .plans-section .plans-top .select .selector .item .title svg, main .content .plans-section .plans-top .select .selector .item .title span {
   vertical-align: middle;
+}
+main .content .plans-section .plans-top .select .selector .item .title svg path {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 main .content .plans-section .plans-top .select .selector .item .title span {
   font-family: Nunito-Bold, sans-serif;
@@ -75,11 +98,16 @@ main .content .plans-section .plans-top .select .selector-sub {
   font-size: 20px;
   text-align: center;
 }
-main .content .plans-section .plans-bottom {
-  text-align: center;
+main .content .plans-section .plans-bottom.selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 1;
+}
+main .content .plans-section .plans-bottom {
+  text-align: center;
+  display: none;
+  opacity: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -187,7 +215,7 @@ main .content .ad-section .item img {
         flex-wrap: wrap;
     gap: 15px;
   }
-  main .content .plans-section .plans-bottom {
+  main .content .plans-section .plans-bottom.selected {
     display: block;
   }
   main .content .plans-section .plans-bottom .plan:not(:last-child) {
