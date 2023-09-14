@@ -1,0 +1,370 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+}
+main aside {
+  padding: 70px 15px 25px 15px;
+}
+main aside .reclam {
+  width: 200px;
+  min-height: 600px;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+}
+main .content {
+  width: 100%;
+  padding-bottom: 35px;
+}
+main .content .org-card .org-sub {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+main .content .org-card .org-header {
+  padding: 25px 0;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main .content .org-card .org-header h2 {
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+main .content .org-card .org-header button:last-child {
+  float: right;
+}
+main .content .org-card .org-header button {
+  float: left;
+  padding: 5px;
+  vertical-align: middle;
+  border: none;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .org-card .org-header button:hover {
+  background-color: #7B86FF;
+}
+main .content .org-card .org-header button:hover svg {
+  stroke: #ffffff;
+}
+main .content .org-card .org-header button:hover svg path {
+  stroke: #ffffff;
+}
+main .content .org-card .org-header button svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+main .content .org-card .org-header button svg, main .content .org-card .org-header button path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .org-card .org-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .content .org-card .org-actions img {
+  width: 350px;
+  height: auto;
+}
+main .content .org-card .org-actions .btns {
+  width: 35%;
+}
+main .content .org-card .org-actions .btns .b-btn {
+  background-color: #4353ff;
+  color: #ffffff;
+  width: 100%;
+  display: block;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+}
+main .content .org-card .org-actions .btns .b-btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+main .content .org-card .org-actions .btns .b-btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .org-card .org-actions .review {
+  font-family: Nunito-SemiBold, sans-serif;
+  cursor: pointer;
+}
+main .content .org-card .org-actions .review .rate svg {
+  width: 20px;
+  height: auto;
+}
+main .content .org-card .org-actions .review .rate span, main .content .org-card .org-actions .review .rate svg {
+  vertical-align: top;
+}
+main .content .org-card .org-actions .review .rate span {
+  line-height: 1.4;
+}
+main .content .org-card .org-actions .review p {
+  text-align: center;
+  font-size: 18px;
+  color: #7B86FF;
+}
+main .content .tabs {
+  border-bottom: 1px solid #ccc;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: scroll;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+main .content .tabs .tabs-left, main .content .tabs .tabs-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .content .tabs::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+main .content .tabs button.selected {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .tabs button.selected .r {
+  background-color: #fff;
+  color: #000;
+}
+main .content .tabs button {
+  white-space: nowrap;
+  min-width: 110px;
+  border: none;
+  background-color: #fff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #33324e;
+  font-family: Nunito-Regular, sans-serif;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .tabs button:hover {
+  background-color: #4353ff;
+  color: #fff;
+}
+main .content .tabs button:hover .r {
+  background-color: #fff;
+  color: #000;
+}
+main .content .tabs button .r {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  display: inline-block;
+  padding: 3px 6px;
+  background-color: #4353ff;
+  color: #fff;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 14px;
+  vertical-align: text-top;
+}
+main .content .tab-content {
+  padding: 15px 35px 15px 0;
+  opacity: 0;
+  display: none;
+}
+main .content .tab-content .item:not(last-child) {
+  margin-bottom: 25px;
+}
+main .content .tab-content .item .title {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+main .content .tab-content .row .item:not(:last-child) {
+  margin-right: 25px;
+}
+main .content .tab-content .head.flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .content .tab-content .rate svg {
+  width: 20px;
+  height: auto;
+}
+main .content .tab-content .rate span, main .content .tab-content .rate svg {
+  vertical-align: top;
+}
+main .content .tab-content .rate span {
+  line-height: 1.4;
+}
+main .content .tab-content .b-btn {
+  background-color: #4353ff;
+  color: #ffffff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+}
+main .content .tab-content .b-btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+main .content .tab-content .b-btn:not(:last-child) {
+  margin-bottom: 15px;
+}
+main .content .tab-content .item-card {
+  -webkit-box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+          box-shadow: 0 0 40px rgba(95, 125, 149, 0.1);
+  background-color: #fff;
+  padding: 15px 25px;
+  max-width: 30%;
+  cursor: pointer;
+}
+main .content .tab-content .item-card .card-header button {
+  cursor: pointer;
+  padding: 4px 5px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .tab-content .item-card .card-header button:hover {
+  background-color: #7B86FF;
+}
+main .content .tab-content .item-card .card-header button:hover svg {
+  stroke: #ffffff;
+}
+main .content .tab-content .item-card .card-header button:hover svg path {
+  stroke: #ffffff;
+}
+main .content .tab-content .item-card .card-header svg {
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+main .content .tab-content .item-card .card-header svg path {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+main .content .tab-content .item-card img {
+  width: 100%;
+  margin-bottom: 25px;
+}
+main .content .tab-content .item-card .title {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  margin: 15px 0;
+}
+main .content .tab-content .item-card .line a {
+  color: #4353ff;
+}
+main .content .tab-content .item-card .line .value {
+  float: right;
+}
+main .content .tab-content .item-card .line .highlight {
+  background-color: #7B86FF;
+  color: #ffffff;
+  border-radius: 15px;
+  padding: 5px 7px;
+  margin-top: -5px;
+}
+main .content .tab-content .item-card .line:not(:last-child) {
+  margin-bottom: 10px;
+}
+main .content .tab-content.selected {
+  display: block;
+  opacity: 1;
+}
+@media screen and (max-width: 1440px) {
+  main aside {
+    padding-top: 65px;
+  }
+  main aside .reclam {
+    width: 150px;
+  }
+  main .content h2 {
+    font-size: 22px;
+  }
+  main .content .tab-content .item-card {
+    max-width: 45%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main .content .tab-content .item-card {
+    max-width: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+  }
+  main aside {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 0;
+  }
+  main aside .reclam {
+    height: 150px;
+    width: 100%;
+  }
+  main aside:not(.mobile) {
+    display: none;
+  }
+  main .content {
+    padding: 0 15px 35px 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main aside a {
+    width: 49%;
+  }
+  main .content .tab-content .item-card {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 425px) {
+  main aside a {
+    width: 85%;
+  }
+  main aside a:not(:first-child) {
+    display: none;
+  }
+}

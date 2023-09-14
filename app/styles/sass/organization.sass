@@ -1,0 +1,302 @@
+// .popup-contacts
+// 	.popup-content
+// 		width: 100%
+// 	.head
+// 		font-family: Nunito-SemiBold, sans-serif
+// 		font-size: 18px
+// 	.line
+// 		font-size: 16px
+// 		margin-top: 10px
+// 		.title
+// 			font-family: Nunito-SemiBold, sans-serif
+// 		.value
+// 			float: right
+main
+	display: flex
+	font-size: 16px
+	aside
+		padding: 70px 15px 25px 15px
+		.reclam
+			width: 200px
+			min-height: 600px
+			height: 100%
+			background-color: gray
+			opacity: 0.3
+	.content
+		width: 100%
+		padding-bottom: 35px
+		.org-card
+			.org-sub
+				font-size: 20px
+				text-align: center
+				margin-bottom: 0
+				margin-top: 15px
+			.org-header
+				padding: 25px 0
+				text-align: center
+				margin-bottom: 15px
+				h2
+					font-size: 25px
+					display: inline-block
+					vertical-align: middle
+					margin: 0
+				button:last-child
+					float: right
+				button
+					float: left
+					padding: 5px
+					vertical-align: middle
+					border: none
+					border-radius: 5px
+					background: none
+					cursor: pointer
+					transition: 0.25s
+					&:hover
+						background-color: #7B86FF
+						svg
+							stroke: #ffffff
+							path
+								stroke: #ffffff
+					svg
+						vertical-align: middle
+						width: 30px
+						height: 30px
+					svg, path
+						transition: 0.25s
+			.org-actions
+				display: flex
+				justify-content: space-around
+				align-items: center
+				img
+					width: 350px
+					height: auto
+				.btns
+					width: 35%
+					.b-btn
+						background-color: #4353ff
+						color: #ffffff
+						width: 100%
+						display: block
+						padding: 10px 15px
+						border: none
+						border-radius: 6px
+						cursor: pointer
+						transition: 0.5s
+						font-size: 16px
+						font-family: Nunito-Regular, sans-serif
+						&:hover
+							background-color: #7B86FF
+							color: #ffffff
+						&:not(:last-child)
+							margin-bottom: 15px
+				.review
+					font-family: Nunito-SemiBold, sans-serif
+					cursor: pointer
+					.rate
+						svg
+							width: 20px
+							height: auto
+						span, svg
+							vertical-align: top
+						span
+							line-height: 1.4
+					p
+						text-align: center
+						font-size: 18px
+						color: #7B86FF
+		.tabs
+			border-bottom: 1px solid #ccc
+			margin-top: 25px
+			display: flex
+			justify-content: space-between
+			overflow-x: scroll
+			width: 100%
+			scrollbar-width: none
+			-ms-overflow-style: none
+			.tabs-left, .tabs-right
+				display: flex
+			&::-webkit-scrollbar
+				width: 0px
+				height: 0px
+			button.selected
+				background-color: #4353ff
+				color: #fff
+				.r
+					background-color: #fff
+					color: #000
+			button
+				white-space: nowrap
+				min-width: 110px
+				border: none
+				background-color: #fff
+				border-top-left-radius: 6px
+				border-top-right-radius: 6px
+				padding: 10px 15px
+				font-size: 16px
+				color: #33324e
+				font-family: Nunito-Regular, sans-serif
+				outline: none
+				cursor: pointer
+				-webkit-transition: 0.25s
+				transition: 0.25s
+				&:hover
+					background-color: #4353ff
+					color: #fff
+					.r
+						background-color: #fff
+						color: #000
+				.r
+					transition: 0.25s
+					display: inline-block
+					padding: 3px 6px
+					background-color: #4353ff
+					color: #fff
+					border-radius: 15px
+					font-size: 14px
+					line-height: 14px
+					vertical-align: text-top
+		.tab-content
+			padding: 15px 35px 15px 0
+			opacity: 0
+			display: none
+			.item
+				&:not(last-child)
+					margin-bottom: 25px
+				.title
+					font-family: Nunito-SemiBold, sans-serif
+					font-size: 18px
+					margin-bottom: 10px
+			.row
+				.item:not(:last-child)
+					margin-right: 25px
+			.head.flex
+				align-items: center
+			.rate
+				svg
+					width: 20px
+					height: auto
+				span, svg
+					vertical-align: top
+				span
+					line-height: 1.4
+			.b-btn
+				background-color: #4353ff
+				color: #ffffff
+				display: block
+				margin-left: auto
+				margin-right: auto
+				padding: 10px 15px
+				border: none
+				border-radius: 6px
+				cursor: pointer
+				transition: 0.5s
+				font-size: 16px
+				font-family: Nunito-Regular, sans-serif
+				&:hover
+					background-color: #7B86FF
+					color: #ffffff
+				&:not(:last-child)
+					margin-bottom: 15px
+			.item-card
+				box-shadow: 0 0 40px rgba(95, 125, 149, 0.1)
+				background-color: #fff
+				padding: 15px 25px
+				max-width: 30%
+				cursor: pointer
+				.card-header
+					button
+						cursor: pointer
+						padding: 4px 5px
+						margin-right: 15px
+						border: none
+						border-radius: 5px
+						background-color: #fff
+						transition: 0.25s
+						&:hover
+							background-color: #7B86FF
+							svg
+								stroke: #ffffff
+								path
+									stroke: #ffffff
+					svg
+						vertical-align: middle
+						width: 30px
+						height: 30px
+						path
+							transition: 0.25s
+				img
+					width: 100%
+					margin-bottom: 25px
+				.title
+					font-family: Nunito-SemiBold, sans-serif
+					font-size: 18px
+					margin: 15px 0
+				.line
+					a
+						color: #4353ff
+					.value
+						float: right
+					.highlight
+						background-color: #7B86FF
+						color: #ffffff
+						border-radius: 15px
+						padding: 5px 7px
+						margin-top: -5px
+				.line:not(:last-child)
+					margin-bottom: 10px
+		.tab-content.selected
+			display: block
+			opacity: 1
+		.contacts
+
+
+@media screen and (max-width: 1440px)
+	main
+		aside
+			padding-top: 65px
+			.reclam
+				width: 150px
+		.content 
+			h2
+				font-size: 22px
+			.tab-content
+				.item-card
+					max-width: 45%
+@media screen and (max-width: 1024px)
+	main
+		.content
+			.tab-content
+				.item-card
+					max-width: none
+					width: 100%
+					box-sizing: border-box
+@media screen and (max-width: 768px)
+	main
+		display: block
+		aside
+			width: 100%
+			box-sizing: border-box
+			padding-top: 0
+			.reclam
+				height: 150px
+				width: 100%
+		aside:not(.mobile)
+			display: none
+		.content
+			padding: 0 15px 35px 15px	
+@media screen and (max-width: 576px)
+	main
+		aside
+			a
+				width: 49%
+		.content
+			.tab-content
+				.item-card
+					padding: 15px
+@media screen and (max-width: 425px)	
+	main
+		aside
+			a
+				width: 85%
+			a:not(:first-child)
+				display: none		

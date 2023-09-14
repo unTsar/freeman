@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+	<meta charset="utf-8">
+	<title>Карточка предприятия</title>
+	<meta name="description" content="Description">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="icon" href="images/favicon.png">
+	<meta property="og:image" content="images/dist/main-big-logo.png">
+
+	<link rel="stylesheet" href="css/hamburgers.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<link rel="stylesheet" href="css/organization.css">
+
+</head>
+<body>
+	<!-- <div class="popup popup-contacts" id="popupContacts">
+		<div class="popup-wrap">
+			<div class="popup-content">
+				<button type="button" class="cross popup-close__btn">
+					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+				</button>
+				<h3>Контакты</h3>
+				<div class="head">Имя</div>
+				<div class="line">
+					<span class="title">Телефон</span>
+					<a href="tel:+79999999999" class="value">+7(999)999-99-99</a>
+				</div>
+				<div class="line">
+					<span class="title">E-mail</span>
+					<a href="mailto:mail@gmail.com" class="value">mail@gmail.com</a>
+				</div>
+			</div>
+		</div>
+	</div> -->
+	<div class="popup popup-logIn">
+	<div class="popup-wrap">
+		<div class="popup-content noselect">
+			<button type="button" class="cross popup-close__btn">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+			</button>
+			<h3>Вход в личный кабинет</h3>
+			<form action="" method="post">
+				<input type="email" placeholder="E-mail">
+				<input type="password" placeholder="Пароль">
+				<div class="checkbox-wrap">
+					<input type="checkbox" id="popup__checkbox1">
+					<label for="popup__checkbox1">Запомнить меня на этом компьютере</label>
+				</div>
+				<input type="submit" value="Войти">
+			</form>
+			<div class="popup-links">
+				<button type="button" class="restore__btn">Забыли пароль?</button>
+				<button type="button" class="reg__btn float-right">Регистрация</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup popup-reg">
+	<div class="popup-wrap">
+		<div class="popup-content noselect">
+			<button type="button" class="cross popup-close__btn">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+			</button>
+			<h3>Регистрация</h3>
+			<form action="" method="post">
+				<div class="tabs">
+					<button class="popup-reg__btn__switchOn active" type="button">Предприятие</button>
+					<button class="popup-reg__btn__switchOff" type="button">Физ. лицо</button>
+				</div>
+				<div class="form-section">
+					<select>
+						<option value="">Выберите регион</option>
+					</select>
+					<select>
+						<option value="">Выберите город</option>
+					</select>
+					<div class="popup-reg__form-switchable">
+						<input type="text" placeholder="Наименование предприятия">
+						<input type="text" placeholder="ИНН">
+					</div>
+				</div>
+				<div class="form-section">
+					<div class="head">Вы регистрируетесь на платформе для:</div>
+					<div class="checkbox-wrap">
+						<input type="checkbox" name="" id="checkbox-reg1">
+						<label for="checkbox-reg1">Для размещения заказов</label>
+					</div>
+					<div class="checkbox-wrap">
+						<input type="checkbox" name="" id="checkbox-reg2">
+						<label for="checkbox-reg2">Для откликов на заказы</label>
+					</div>
+					<div class="checkbox-wrap">
+						<input type="checkbox" name="" id="checkbox-reg3">
+						<label for="checkbox-reg3">Другая цель</label>
+					</div>
+				</div>
+				<div class="form-section">
+					<div class="head">Контактное лицо:</div>
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Фамилия">
+					<input type="tel" placeholder="Телефон">
+					<input type="email" placeholder="E-mail">
+					<input type="password" placeholder="Пароль">
+					<input type="password" placeholder="Подтверждение пароля">
+				</div>
+				<div class="checkbox-wrap confident">
+					<input type="checkbox" id="popup__checkbox2">
+					<label for="popup__checkbox2">Я принимаю <a href="">политику конфиденциальности</a></label>
+				</div>
+				<input type="submit" value="Регистрация">
+			</form>
+		</div>
+	</div>
+</div>
+<div class="popup popup-restore">
+	<div class="popup-wrap">
+		<div class="popup-content noselect">
+			<button type="button" class="cross popup-close__btn">
+				<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
+			</button>
+			<h3>Восстановление пароля</h3>
+			<form action="" method="post">
+				<input type="email" placeholder="E-mail">
+				<input type="submit" value="Восстановить пароль">
+			</form>
+		</div>
+	</div>
+</div>
+<div class="mobile-menu hidden" id="menu">
+	<div class="item plans">
+		<a href="/">Прайс</a>
+	</div>
+	<div class="item links">
+		<ul>
+			<li><a href="orders.html">Предложения</a></li>
+			<li><a href="fair.html">Объявления</a></li>
+			<li class="dropdown">
+				<span>Для принципала</span>
+				<ul>
+					<li><a href="/">Об агентах</a></li>
+					<li><a href="/">Работа с командой</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<span>Для агента</span>
+				<ul>
+					<li><a href="/">Об агентской деятельности</a></li>
+					<li><a href="/">Присоединиться к "Название"</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li><a href="/">Помощь</a></li>
+		</ul>
+	</div>
+	<div class="item login">
+		<ul>
+			<li><button type="button" class="logIn__btn">Вход</button></li>
+			<li><button type="button" class="reg__btn">Регистрация</button></li>
+		</ul>
+	</div>
+</div>
+<header>
+	<div class="header-box">
+		<button class="hamburger hamburger--vortex" type="button">
+			<span class="hamburger-box">
+			  <span class="hamburger-inner"></span>
+			</span>
+		</button>
+		<div class="logo"><a href="index.html">Название</a></div>
+		<div class="plans"><a href="/">Прайс</a></div>
+		<div class="login">
+			<ul>
+				<li><span class="logIn__btn">Вход</span></li>
+				<li><span class="reg__btn">Регистрация</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header-menu">
+		<ul>
+			<li><a href="orders.html">Предложения</a></li>
+			<li><a href="fair.html">Объявления</a></li>
+			<li>
+				<span>Для принципала</span>
+				<ul>
+					<li><a href="/">Об агентах</a></li>
+					<li><a href="/">Работа с командой</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li>
+				<span>Для агента</span>
+				<ul>
+					<li><a href="/">Об агентской деятельности</a></li>
+					<li><a href="/">Присоединиться к "Название"</a></li>
+					<li><a href="/">Скачать агентский договор</a></li>
+				</ul>
+			</li>
+			<li><a href="/">Помощь</a></li>
+
+		</ul>
+	</div>
+</header>
+	<main>
+		<aside>
+			<div class="reclam"></div>
+		</aside>
+		<div class="content">
+			<div class="org-card">
+				<p class="org-sub">Дата регистрации: 01.07.2019</p>
+				<div class="org-header">
+					<button type="button">
+						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+					</button>
+					<h2>Спецоптовик37 - ФАБРИКА ПОШИВА ОДЕЖДЫ</h2>
+					<button type="button">
+						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
+					</button>
+				</div>
+				<div class="org-actions">
+					<img src="images/dist/no-photo-placeholder.png" width="260" height="109" alt="images/dist/no-photo-placeholder.png">
+					<div class="btns">
+						<button type="button" class="b-btn">
+							<span>Написать сообщение</span>
+						</button>
+						<button type="button" class="b-btn">
+							<span>Проверка контрагента</span>
+						</button>
+					</div>
+					<div class="review" id="tab-content7__open">
+						<div class="rate">
+							<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+							<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+							<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+							<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+							<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+							<span>4.5</span>
+						</div>
+						<p>Отзывы(0)</p>
+					</div>
+				</div>
+
+			</div>
+			<div class="tabs noselect">
+				<div class="tabs-left">
+					<button type="button" class="toggleView__btn selected" id="toggleView__btn1">Контакты</button>
+					<button type="button" class="toggleView__btn" id="toggleView__btn2">Реквизиты</button>
+					<button type="button" class="toggleView__btn" id="toggleView__btn3">Описание</button>
+					<button type="button" class="toggleView__btn" id="toggleView__btn4">Категории</button>
+				</div>
+				<div class="tabs-right">
+					<button type="button" class="toggleView__btn" id="toggleView__btn5">Предложения <div class="r">1</div></button>
+					<button type="button" class="toggleView__btn" id="toggleView__btn6">Объявления <div class="r">1</div></button>
+					<button type="button" class="toggleView__btn" id="toggleView__btn7">Отзывы <div class="r">1</div></button>
+				</div>
+			</div>
+			<div class="tab-content selected" id="tab-content1">
+				<div class="item">
+					<div class="title">Сайт</div>
+					<a href="https://specoptovik37.ru/">https://specoptovik37.ru/</a>
+				</div>
+				<div class="item">
+					<div class="title">Соцсети</div>
+					<a href="https://vk.com/public166842803">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 1024 1024"><circle cx="512" cy="512" r="512" style="fill:#2787f5"/><path d="M585.83 271.5H438.17c-134.76 0-166.67 31.91-166.67 166.67v147.66c0 134.76 31.91 166.67 166.67 166.67h147.66c134.76 0 166.67-31.91 166.67-166.67V438.17c0-134.76-32.25-166.67-166.67-166.67zm74 343.18h-35c-13.24 0-17.31-10.52-41.07-34.62-20.71-20-29.87-22.74-35-22.74-7.13 0-9.17 2-9.17 11.88v31.57c0 8.49-2.72 13.58-25.12 13.58-37 0-78.07-22.4-106.93-64.16-43.45-61.1-55.33-106.93-55.33-116.43 0-5.09 2-9.84 11.88-9.84h35c8.83 0 12.22 4.07 15.61 13.58 17.31 49.9 46.17 93.69 58 93.69 4.41 0 6.45-2 6.45-13.24v-51.6c-1.36-23.76-13.92-25.8-13.92-34.28 0-4.07 3.39-8.15 8.83-8.15h55c7.47 0 10.18 4.07 10.18 12.9v69.58c0 7.47 3.39 10.18 5.43 10.18 4.41 0 8.15-2.72 16.29-10.86 25.12-28.17 43.11-71.62 43.11-71.62 2.38-5.09 6.45-9.84 15.28-9.84h35c10.52 0 12.9 5.43 10.52 12.9-4.41 20.37-47.18 80.79-47.18 80.79-3.73 6.11-5.09 8.83 0 15.61 3.73 5.09 16 15.61 24.1 25.12 14.94 17 26.48 31.23 29.53 41.07 3.45 9.84-1.65 14.93-11.49 14.93z" style="fill:#fff"/></svg>
+					</a>
+				</div>
+			</div>
+			<div class="tab-content" id="tab-content2">
+				<div class="item">
+					<div class="title">Наименование (по ЕГРЮЛ)</div>
+				</div>
+				<div class="row flex">
+					<div class="item">
+						<div class="title">ИНН</div>
+						<div class="text">3702703793</div>
+					</div>
+					<div class="item">
+						<div class="title">ОГРН</div>
+						<div class="text">1133702017492</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="title">Юридический адрес</div>
+				</div>
+				<div class="item">
+					<div class="title">Должность уполномоченного лица</div>
+				</div>
+				<div class="item">
+					<div class="title">ФИО уполномоченного лица</div>
+				</div>
+			</div>
+			<div class="tab-content" id="tab-content3">
+				<p>"Спецоптовик37" более чем 8 лет занимает одни из лидирующих позиций на рынке в Российской Федерации среди компаний по производству и продажи трикотажной одежды, рабочей одежды, различной спецодежды, спортивной одежды, КПБ, одежды и товаров для охоты, рыбалки, туризма и отдыха.<br><br>Мы производим товар под Вашими брендами, выполняем оптовый пошив для маркетплейсов и услуги фулфилмента( помощь в продвижении, храним, маркируем и упаковываем товар по всем правилам  популярных торговых площадок), сотрудничаем с известными Российскими брендами и реализуем товар как оптом так и в розницу по РФ и СНГ.  <br><br><br><br> Компания Спецоптовик37 регулярно следит за трендами рынка и старается добавлять и расширять ассортимент своей продукции новыми товарами и интересными идеями. Так же принимаем и рассматриваем Ваши заказы и тех.задания на отшив , дополнительно сделаем Ваш логотип.<br><br><br><br><br><br> Дорогие друзья! Дополнительно отличительная черта наших товаров и изделий является качество материала и хороший пошив, индивидуальность,стиль и просто хорошие вещи по очень демократичным ценам!<br><br><br><br>  Команда Спецоптовик37 старается каждый день двигаться вперед и развиваться, следить за своим производством и качеством выполнения выпускаемой продукции, стараемся в полной мере учитывать сроки, следим и стараемся улучшить сервис компании, интересоваться развитием дел у наших партнеров и предлагать выгодные условия сотрудничества, потому что вместе мы сможем пройти через все трудности !!!<br><br><br><br>   Спецоптовик37- это торгово-производственная компания, ее вид деятельности заключается в разработке и изготовлении трикотажной модной одежды, специальной рабочей одежды и униформы для различных видов профессий. Так же компания Спецоптовик изготавливает специальную одежду и товары для туризма,кемпинга, КПБ, производство перчаток и рукавиц, спортивную одежду, одежду для охоты и рыбалки. Компания может поставлять ткань для производств по выгодным ценам. В нашем интернет-магазине по настоящему качественный продукт и что самое главное по очень низкой стоимости. Мы являемся производителями своей продукции и вместе с нашей командой вкладываем частичку души в свое дело работая для Вас! Сотрудничаем только с проверенными поставщиками материалов, наши клиенты на качество не жалуются!     <br><br><br><br>  Для нас очень важно чтобы вы остались довольны от покупки и работы с нами, поэтому менеджеры нашей компании стараются быть максимально вежливыми и исполнительными учитывая все Ваши пожелания. Наша компания имеет достаточно большой опыт в текстильном производстве и торговле, регулярно изучаем рынок, проводим различные маркетинговые мероприятия, да бы оградить нашего клиента от не добросовестного партнерства и предложить вам наиболее выгодные условия для бизнеса и торговли. Наш сайт специализируется на крупном и мелком опте, а так же розница и что очень интересно мы можем изготовить практически любое изделие по вашему требованию под заказ, присылайте свои тех. задания будем рассматривать. Работайте с нами, а мы будем стараться и делать все, что бы Вы остались довольны!!!</p>
+				<img width="200" src="images/dist/no-photo-placeholder.png" alt="no-photo-placeholder.png">
+				<img width="200" src="images/dist/no-photo-placeholder.png" alt="no-photo-placeholder.png">
+				<img width="200" src="images/dist/no-photo-placeholder.png" alt="no-photo-placeholder.png">
+				<img width="200" src="images/dist/no-photo-placeholder.png" alt="no-photo-placeholder.png">
+			</div>
+			<div class="tab-content" id="tab-content4">
+				<div class="item">
+					<div class="title">Одежда</div>
+					<div class="title">Обувь</div>
+					<div class="title">Текстиль</div>
+					<div class="title">Ткани, нити, пряжа</div>
+					<div class="title">Фурнитура</div>
+					<div class="title">Галантерея</div>
+					<div class="title">Оборудование</div>
+					<div class="title">Услуги</div>
+					<div class="title">Другое</div>
+				</div>
+			</div>
+			<div class="tab-content" id="tab-content5">
+				<div class="item-card">
+					<div class="card-header">
+						<button type="button">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+						</button>
+						<button type="button">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
+						</button>
+					</div>
+					<div class="title">Предложение</div>
+					<img src="images/dist/no-photo-placeholder.png" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line">
+							<span class="head">Заказчик</span>
+							<a href="/fair.html" class="value">Имя</a>
+						</div>
+						<div class="line">
+							<span class="head">Дата публикации</span>
+							<span class="value">10.08.2023</span>
+						</div>
+						<div class="line">
+							<span class="head">Количество</span>
+							<span class="value">1 шт.</span>
+						</div>
+						<div class="line">
+							<span class="head">Сумма</span>
+							<span class="value highlight">1000 руб.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content" id="tab-content6">
+				<div class="item-card">
+					<div class="card-header">
+						<button type="button">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+						</button>
+						<button type="button">
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
+						</button>
+					</div>
+					<div class="title">Объявление</div>
+					<img src="images/dist/no-photo-placeholder.png" alt="images/dist/no-photo-placeholder.png">
+					<div class="card-info">
+						<div class="line">
+							<span class="head">Заказчик</span>
+							<a href="/fair.html" class="value">Имя</a>
+						</div>
+						<div class="line">
+							<span class="head">Дата публикации</span>
+							<span class="value">10.08.2023</span>
+						</div>
+						<div class="line">
+							<span class="head">Количество</span>
+							<span class="value">1 шт.</span>
+						</div>
+						<div class="line">
+							<span class="head">Сумма</span>
+							<span class="value highlight">1000 руб.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tab-content" id="tab-content7">
+				<div class="head flex">
+					<h3>Отзывы</h3>
+					<button type="button" class="b-btn" id="popup-review__btn">Оставить отзыв</button>
+				</div>
+				<div class="item">
+					<div class="rate">
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<span>4.5</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="text">Ваш отзыв будет первым</div>
+				</div>
+				<div class="item">
+					<div class="rate">
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<span>1</span>
+					</div>
+					<div class="rate">
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<span>1</span>
+					</div>
+					<div class="rate">
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<span>0</span>
+					</div>
+					<div class="rate">
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<span>0</span>
+					</div>
+					<div class="rate">
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FCA95D"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF"><path clip-rule="evenodd" d="m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z" stroke="#FCA95D"></path></svg>
+						<span>0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<aside class="mobile">
+			<div class="reclam"></div>
+		</aside>
+	</main>
+	<footer>
+	<div class="content flex">
+		<nav>
+			<ul>
+				<li><a href="/">Об агентской деятельности</a></li>
+				<li><a href="/">Публичная оферта</a></li>
+				<li><a href="/">Политика конфиденциальности</a></li>
+				<li><a href="/">Реквизиты</a></li>
+				<li><a href="/">Прайс</a></li>
+				<li><a href="/">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="contacts">
+			<a href="tel:+79999999999">+7 (999) 999-99-99</a>
+			<a href="mailto:mail@yandex.ru">mail@yandex.ru</a>
+			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A449373fd8b314cc34468f1f049f493cc528b9e18bf7880ea9f16eb30242cd58e&amp;source=constructor" width="600" height="250" frameborder="0"></iframe>
+		</div>
+	</div>
+	<span class="copy">&copy; «Название», 2015-2023</span>
+</footer>
+	<script src="js/jquery.min.js"></script>
+	<!-- header -->
+	<script src="js/main.js"></script>
+
+	<!-- <script>
+		$(document).ready(function(){
+			$(".contacts__btn").click(function(){
+				$("#popupContacts").fadeIn(250);
+				$("body").addClass("fixed");
+				$(".popup").not("#popupContacts").fadeOut(250);
+			});
+		});
+	</script> -->
+	<script>
+		$(document).ready(function(){
+			$(".toggleView__btn").click(function(){
+					$(".toggleView__btn").not(this).removeClass("selected");
+					$(this).addClass("selected");
+					var id_num = $(this).attr("id").slice(-1);
+					$(".tab-content").not($("#tab-content"+id_num)).animate({opacity: 0}, 350);
+					$(".tab-content").not($("#tab-content"+id_num)).removeClass("selected");
+					$("#tab-content"+id_num).animate({opacity: 1}, 350);
+					$("#tab-content"+id_num).addClass("selected");
+			});
+			$("#tab-content7__open").click(function(){
+				$(".toggleView__btn").not("#toggleView__btn7").removeClass("selected");
+				$("#toggleView__btn7").addClass("selected");
+				$(".tab-content").not($("#tab-content7")).animate({opacity: 0}, 350);
+				$(".tab-content").not($("#tab-content7")).removeClass("selected");
+				$("#tab-content7").animate({opacity: 1}, 350);
+				$("#tab-content7").addClass("selected");
+			});
+		});
+	</script>
+</body>
+</html> 
