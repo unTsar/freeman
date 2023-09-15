@@ -16,25 +16,36 @@
 
 </head>
 <body>
-	<!-- <div class="popup popup-contacts" id="popupContacts">
+	<div class="popup popup-review" id="popupReview">
 		<div class="popup-wrap">
 			<div class="popup-content">
 				<button type="button" class="cross popup-close__btn">
 					<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z" fill="#33324e"></path></g></svg>
 				</button>
-				<h3>Контакты</h3>
-				<div class="head">Имя</div>
-				<div class="line">
-					<span class="title">Телефон</span>
-					<a href="tel:+79999999999" class="value">+7(999)999-99-99</a>
+				<h3>Добавить отзыв</h3>
+				<div class="section">
+					<div class="head">Ваша оценка:</div>
+					<div class="rate-area">
+						<input type="radio" id="star-5" name="rating" value="5">
+						<label for="star-5" title="Оценка «5»"></label>	
+						<input type="radio" id="star-4" name="rating" value="4">
+						<label for="star-4" title="Оценка «4»"></label>    
+						<input type="radio" id="star-3" name="rating" value="3">
+						<label for="star-3" title="Оценка «3»"></label>  
+						<input type="radio" id="star-2" name="rating" value="2">
+						<label for="star-2" title="Оценка «2»"></label>    
+						<input type="radio" id="star-1" name="rating" value="1">
+						<label for="star-1" title="Оценка «1»"></label>
+					</div>
 				</div>
-				<div class="line">
-					<span class="title">E-mail</span>
-					<a href="mailto:mail@gmail.com" class="value">mail@gmail.com</a>
+				<div class="section">
+					<label for="popupReview-textarea" class="head">Введите текст вашего отзыва</label>
+					<textarea name="" id="popupReview-textarea" cols="30" rows="10"></textarea>
 				</div>
+				<button type="button" class="b-btn">Отправить</button>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<div class="popup popup-logIn">
 	<div class="popup-wrap">
 		<div class="popup-content noselect">
@@ -210,15 +221,15 @@
 		</aside>
 		<div class="content">
 			<div class="org-card">
-				<p class="org-sub">Дата регистрации: 01.07.2019</p>
 				<div class="org-header">
 					<button type="button">
 						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7 4C18.87 4 21 6.98 21 9.76C21 15.39 12.16 20 12 20C11.84 20 3 15.39 3 9.76C3 6.98 5.13 4 8.3 4C10.12 4 11.31 4.91 12 5.71C12.69 4.91 13.88 4 15.7 4Z" stroke="#33324e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
 					</button>
-					<h2>Спецоптовик37 - ФАБРИКА ПОШИВА ОДЕЖДЫ</h2>
-					<button type="button">
+					<button type="button" class="right">
 						<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12C9 13.3807 7.88071 14.5 6.5 14.5C5.11929 14.5 4 13.3807 4 12C4 10.6193 5.11929 9.5 6.5 9.5C7.88071 9.5 9 10.6193 9 12Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M14 6.5L9 10" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M14 17.5L9 14" stroke="#33324e" stroke-width="1.5" stroke-linecap="round"></path> <path d="M19 18.5C19 19.8807 17.8807 21 16.5 21C15.1193 21 14 19.8807 14 18.5C14 17.1193 15.1193 16 16.5 16C17.8807 16 19 17.1193 19 18.5Z" stroke="#33324e" stroke-width="1.5"></path> <path d="M19 5.5C19 6.88071 17.8807 8 16.5 8C15.1193 8 14 6.88071 14 5.5C14 4.11929 15.1193 3 16.5 3C17.8807 3 19 4.11929 19 5.5Z" stroke="#33324e" stroke-width="1.5"></path></g></svg>
 					</button>
+					<p class="org-sub">Дата регистрации: 01.07.2019</p>
+					<h2>Спецоптовик37 - ФАБРИКА ПОШИВА ОДЕЖДЫ</h2>
 				</div>
 				<div class="org-actions">
 					<img src="images/dist/no-photo-placeholder.png" width="260" height="109" alt="images/dist/no-photo-placeholder.png">
@@ -244,7 +255,7 @@
 				</div>
 
 			</div>
-			<div class="tabs noselect">
+			<div class="tabs">
 				<div class="tabs-left">
 					<button type="button" class="toggleView__btn selected" id="toggleView__btn1">Контакты</button>
 					<button type="button" class="toggleView__btn" id="toggleView__btn2">Реквизиты</button>
@@ -466,16 +477,15 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- header -->
 	<script src="js/main.js"></script>
-
-	<!-- <script>
+	<script>
 		$(document).ready(function(){
-			$(".contacts__btn").click(function(){
-				$("#popupContacts").fadeIn(250);
+			$("#popup-review__btn").click(function(){
+				$("#popupReview").fadeIn(250);
 				$("body").addClass("fixed");
-				$(".popup").not("#popupContacts").fadeOut(250);
+				$(".popup").not("#popupReview").fadeOut(250);
 			});
 		});
-	</script> -->
+	</script>
 	<script>
 		$(document).ready(function(){
 			$(".toggleView__btn").click(function(){

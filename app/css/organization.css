@@ -1,3 +1,73 @@
+.popup-review {
+  text-align: center;
+}
+.popup-review .popup-content {
+  width: 100%;
+}
+.popup-review .head {
+  font-family: Nunito-SemiBold, sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.popup-review .section {
+  margin-bottom: 25px;
+}
+.popup-review textarea {
+  margin-top: 15px;
+  width: 100%;
+  resize: none;
+  font-family: Nunito-Regular, sans-serif;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.popup-review .b-btn {
+  background-color: #4353ff;
+  color: #ffffff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 16px;
+  font-family: Nunito-Regular, sans-serif;
+}
+.popup-review .b-btn:hover {
+  background-color: #7B86FF;
+  color: #ffffff;
+}
+.popup-review .rate-area {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 210px;
+}
+.popup-review .rate-area:not(:checked) > input {
+  display: none;
+}
+.popup-review .rate-area:not(:checked) > label {
+  float: right;
+  width: 42px;
+  padding: 0;
+  cursor: pointer;
+}
+.popup-review .rate-area:not(:checked) > label:before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF'%3E%3Cpath clip-rule='evenodd' d='m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z' stroke='%23FCA95D'%3E%3C/path%3E%3C/svg%3E");
+}
+.popup-review .rate-area > input:checked ~ label:before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' fill='%23FCA95D'%3E%3Cpath clip-rule='evenodd' d='m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z' stroke='%23FCA95D'%3E%3C/path%3E%3C/svg%3E");
+}
+.popup-review .rate-area:not(:checked) label:hover ~ label:before,
+.popup-review .rate-area:not(:checked) > label:hover:before {
+  content: url("data:image/svg+xml,%3Csvg viewBox='0 0 26 26' xmlns='http://www.w3.org/2000/svg' fill='%23FCA95D'%3E%3Cpath clip-rule='evenodd' d='m13.568 1.395 3.052 7.577 7.816.704c.542.05.762.758.35 1.132l-5.927 5.386 1.776 8.012c.123.557-.452.995-.918.699l-6.716-4.248-6.717 4.248c-.467.294-1.04-.144-.918-.7l1.777-8.011-5.93-5.387c-.411-.374-.192-1.083.352-1.132L9.38 8.97l3.053-7.576a.605.605 0 0 1 1.135 0Z' stroke='%23FCA95D'%3E%3C/path%3E%3C/svg%3E");
+}
+.popup-review .rate-area > label:active {
+  position: relative;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,26 +86,30 @@ main aside .reclam {
 }
 main .content {
   width: 100%;
+  overflow-x: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-bottom: 35px;
-}
-main .content .org-card .org-sub {
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 0;
-  margin-top: 15px;
 }
 main .content .org-card .org-header {
   padding: 25px 0;
   text-align: center;
   margin-bottom: 15px;
 }
+main .content .org-card .org-header .org-sub {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
 main .content .org-card .org-header h2 {
   font-size: 25px;
   display: inline-block;
   vertical-align: middle;
   margin: 0;
+  max-width: 87%;
 }
-main .content .org-card .org-header button:last-child {
+main .content .org-card .org-header button.right {
   float: right;
 }
 main .content .org-card .org-header button {
@@ -76,6 +150,9 @@ main .content .org-card .org-actions {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }
 main .content .org-card .org-actions img {
   width: 350px;
@@ -124,28 +201,32 @@ main .content .org-card .org-actions .review p {
   font-size: 18px;
   color: #7B86FF;
 }
+main .content .tabs::-webkit-scrollbar {
+  height: 0;
+}
 main .content .tabs {
   border-bottom: 1px solid #ccc;
-  margin-top: 25px;
+  padding-top: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  overflow-x: scroll;
+  white-space: nowrap;
+  overflow-y: hidden;
+  overflow-x: auto;
+  max-width: 100%;
   width: 100%;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
 }
 main .content .tabs .tabs-left, main .content .tabs .tabs-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-main .content .tabs::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
 }
 main .content .tabs button.selected {
   background-color: #4353ff;
@@ -309,6 +390,7 @@ main .content .tab-content.selected {
   display: block;
   opacity: 1;
 }
+
 @media screen and (max-width: 1440px) {
   main aside {
     padding-top: 65px;
@@ -330,6 +412,12 @@ main .content .tab-content.selected {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  main .content .org-card .org-sub {
+    font-size: 18px;
+  }
+  main .content .org-card .org-header h2 {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -350,6 +438,26 @@ main .content .tab-content.selected {
   }
   main .content {
     padding: 0 15px 35px 15px;
+  }
+  main .content .org-card .org-header {
+    padding: 15px 0;
+  }
+  main .content .org-card .org-header h2 {
+    font-size: 18px;
+  }
+  main .content .org-card .org-header .org-sub {
+    font-size: 16px;
+  }
+  main .content .org-card .org-actions {
+    display: block;
+    text-align: center;
+  }
+  main .content .org-card .org-actions img {
+    max-width: 100%;
+  }
+  main .content .org-card .org-actions .btns {
+    width: 100%;
+    margin: 15px 0;
   }
 }
 @media screen and (max-width: 576px) {
